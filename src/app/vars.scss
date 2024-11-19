@@ -1,0 +1,70 @@
+:root {
+  --background: #000000;
+  --colorWhite: #ffffff;
+  --colorBlack: #000000;
+  --fontColor: #03414c;
+  --colorStateActive: #13FF71;
+  --colorStateNotActive: var(--errorColor);
+  --colorInputText: #171313;
+  --gradient-admin: linear-gradient(53.46deg, #FFC701 10.65%, #FF2406 97.48%);
+  --gradient-admin-200: linear-gradient(120deg, #FFC701 10.65%, #FF2406 42.5%, #FF2406 57.5%, #FFC701 93.5%);;
+  --gradient-customer: linear-gradient(51.48deg, #00B3FF 2.02%, #00FFB3 74.55%);
+  --gradient-customer-200: linear-gradient(120deg, #00B3FF 18.5%, #00FFB3 45.5%, #00FFB3 55.5%, #00B3FF 88.5%);
+  --gradient-performer: linear-gradient(44.74deg, #FFE600 21.74%, #00FFB3 86%);
+  --gradient-performer-200: linear-gradient(90.76deg, #FFE600 0.27%, #00FFB3 45.66%, #00FFB3 55.66%, #FFE600 99.27%);
+  --accentColor: rgb(0, 255, 174);
+  --errorColor: rgba(244, 86, 95, 1);
+  --buttonOutlineText: #DCFFF4;
+  --container: 84rem;
+  --gridGap: 1.25rem;
+  --totalCol: 12;
+  --gradient-directory: transparent;
+  --shadow: -9px 10px 11px rgba(0, 0, 0, 0.25);
+  --columnWidth: 5.625rem;
+  --sideGutter: calc((100vw - var(--container)) / 2 - .5rem - var(--gridGap));
+  --grid: var(--sideGutter) var(--gridNoMargin) var(--sideGutter);
+  --gridNoMargin: repeat(2, minmax(6rem, 1.33fr)) repeat(var(--totalCol), .95fr);
+  --gridinner: repeat(var(--totalCol), 1fr);
+  --centered: 2/-2;
+  --full_centered: 1/-1;
+
+  //forms and inputs
+  --formBorder: #B6C1BE;
+  --formBorderSelected: var(--accentColor);
+
+  //Panel
+  --bgPanelColor: rgba(36, 37, 41, 0.60);
+  --borderPanelColor: rgba(96, 97, 99, 0.60);
+  --scaling-font: 16px;
+
+  @media screen and (max-width: 960px) {
+	--container: 44.375rem;
+	--gridGap: .625rem;
+	--totalCol: 12;
+	--centered: 3/-3;
+	--scaling-font: 16px;
+	--sideGutter: 1.25rem;
+	--gridNoMargin: repeat(var(--totalCol), 1fr);
+  }
+  @media screen and (min-width: 960px) and (max-width: 1299px){
+	--container: 44.375rem;
+	--gridGap: .625rem;
+	--totalCol: 11;
+	--centered: 3/-3;
+	--scaling-font: 16px;
+	--sideGutter: 1.25rem;
+	--gridNoMargin: 56px repeat(var(--totalCol), 1fr);
+  }
+  @media screen and (min-width: 1300px) {
+	--scaling-font:  clamp(16px, calc(100dvh / 64 - 1px), 24px);
+  }
+  @media screen and (max-width: 743px) {
+	--sideGutter: 0.75rem;
+	--container: 350px;
+	--gridGap: 0px;
+	--totalCol: 6;
+	--scaling-font: 16px;
+	--centered: 2/-2;
+	--gridNoMargin:  repeat(var(--totalCol), 1fr) ;
+  }
+}

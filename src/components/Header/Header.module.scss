@@ -1,0 +1,13 @@
+.Header {
+  @apply flex;
+  justify-content: space-between;
+
+  @screen tablet {
+	padding: 25px 15px;
+	grid-column: 1/-1;
+  }
+
+  @screen desktop {
+	grid-column: 2/-2;
+  }
+}
