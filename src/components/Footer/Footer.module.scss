@@ -2,6 +2,10 @@
 	background: var(--fontColor);
   color: white;
   grid-column: 1/-1;
+  @screen tablet-max {
+	padding: 55px 20px 45px;
+	display: block;
+  }
   padding: 55px 0 45px;
   display: grid;
   grid-template-columns: subgrid;
@@ -25,9 +29,10 @@
 
 }
 .TopFooter {
+  @screen tablet {
 	display: grid;
   	grid-template-columns: subgrid;
-
+}
 	> * {
 	  grid-column: 1/-1;
 	  align-items: start;
@@ -68,6 +73,13 @@
  }
   ul {
 	display: flex;
+	@screen tablet-max {
+	  flex-direction: column;
+	  gap: 0;
+	  li {
+		margin: .25rem 0;
+	  }
+	}
 	gap: 1.25rem;
   }
   a {

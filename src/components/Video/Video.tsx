@@ -74,6 +74,7 @@ export const VideoComponent = ({
 	}, [ src, poster, style ]);
 
 	return (
+		<div className={"max-w-screen-md w-full justify-self-center"}>
 		<span title={alt}
 			style={{
 				position: "relative",
@@ -83,6 +84,7 @@ export const VideoComponent = ({
 			{player}
 
     </span>
+		</div>
 	);
 };
 

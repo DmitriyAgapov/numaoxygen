@@ -55,10 +55,10 @@ const BottomFooter = () => <div className={styles.BottomFooter}>
 		{mockData.footer.bottomMenu.items.map((el, index) => <li key={el.link + index}><Link href={el.link as string}>{el.title}</Link></li>)}
 	</ul>
 </div>
-const CenterFooter = () => <div className={styles.CenterFooter + " " + "flex justify-between py-8 items-start gap-8"}>
+const CenterFooter = () => <div className={styles.CenterFooter + " " + "lg:flex justify-between py-8 items-start gap-8"}>
 	<div className={"flex-1"}>
 		<h6>HBOT</h6>
-		<ul className={'grid grid-rows-3 grid-flow-col'}>
+		<ul className={'lg:grid grid-rows-3 grid-flow-col'}>
 			{mockData.footer.menu.items.slice(0, -3).map((el, index) => <li key={el.link + index}><Link href={el.link as string}>{el.title}</Link></li>)}
 		</ul>
 	</div>
