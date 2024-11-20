@@ -68,7 +68,7 @@ export const VideoComponent = ({
 			height: "100%",
 			...style,
 		}}  url={src} fallback={poster ? <Image src={poster as string} alt={""}/> : <></> } />)
-	}, []);
+	}, [src, poster, style]);
 	return (
 		<span ref={targetRef as any} title={alt}
 			style={{
