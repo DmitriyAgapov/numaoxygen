@@ -2,7 +2,7 @@
 import { CSSProperties,  useCallback, useEffect, useRef, useState } from "react";
 
 import { useIsVisible } from "@/utils/hooks";
-import ReactPlayer from "react-player";
+import ReactPlayer, { ReactPlayerProps } from "react-player";
 import Image from "next/image";
 
 type VideoComponentProps = {
@@ -58,7 +58,7 @@ export const VideoComponent = ({
 			stopVideoOnMove();
 		}
 	}, [isVisible, startVideoOnMouseMove, stopVideoOnMove]);
-	const [player, setPlayer] = useState<any>(null);
+	const [player, setPlayer] = useState<React.ReactNode |null>(null);
 	useEffect(() => {
 		setPlayer(() => <ReactPlayer  width={"100%"} height={"100%"}  style={{
 			objectFit: "contain",
