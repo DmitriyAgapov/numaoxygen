@@ -1,8 +1,9 @@
 'use client'
-import { CSSProperties, Suspense, useCallback, useEffect, useRef, useState } from "react";
+import { CSSProperties,  useCallback, useEffect, useRef, useState } from "react";
 
 import { useIsVisible } from "@/utils/hooks";
 import ReactPlayer from "react-player";
+import Image from "next/image";
 
 type VideoComponentProps = {
 	src: string;
@@ -16,7 +17,7 @@ export const VideoComponent = ({
 	style,
 	alt,
 }: VideoComponentProps) => {
-	console.log(src);
+
 	const { isVisible, targetRef } = useIsVisible(
 		{
 			root: null,
@@ -34,6 +35,7 @@ export const VideoComponent = ({
 				await videoRef.current.play();
 			}
 		} catch (e) {
+			console.log(e)
 			// do nothing
 		}
 	}, []);
@@ -44,6 +46,7 @@ export const VideoComponent = ({
 				videoRef.current.pause();
 			}
 		} catch (e) {
+			console.log(e)
 			// do nothing
 		}
 	}, []);
@@ -57,17 +60,17 @@ export const VideoComponent = ({
 	}, [isVisible, startVideoOnMouseMove, stopVideoOnMove]);
 	const [player, setPlayer] = useState<any>(null);
 	useEffect(() => {
-		setPlayer(() => <ReactPlayer width={"100%"} height={"100%"}  style={{
+		setPlayer(() => <ReactPlayer  width={"100%"} height={"100%"}  style={{
 			objectFit: "contain",
 			aspectRatio: "16/9",
 			display: "block",
 			width: "100%",
 			height: "100%",
 			...style,
-		}}  url={src} />)
+		}}  url={src} fallback={poster ? <Image src={poster as string} alt={""}/> : <></> } />)
 	}, []);
 	return (
-		<span ref={targetRef as any}
+		<span ref={targetRef as any} title={alt}
 			style={{
 				position: "relative",
 				minHeight: "50px",
