@@ -3,7 +3,7 @@ import styles from './Section.module.scss';
 import Link from "next/link";
 import { VideoComponent } from "@/components/Video/Video";
 
-type CustomLink = {
+export type CustomLink = {
 	title: string
 	link: string
 }

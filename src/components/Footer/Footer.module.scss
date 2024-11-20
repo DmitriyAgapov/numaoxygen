@@ -1,3 +1,85 @@
 .Footer {
+	background: var(--fontColor);
+  color: white;
+  grid-column: 1/-1;
+  padding: 55px 0 45px;
+  display: grid;
+  grid-template-columns: subgrid;
+  > * {
+	grid-column: 2/-2;
+  }
+  h6 {
+	color: white;
+	font-size: 16px;
+	line-height: 1;
+	margin-bottom: 11px;
+	display: block;
+	font-family: "Work Sans", sans-serif;
 
+	font-weight: 400;
+	& + p {
+	  color: #add8cc;
+	  font-size: 16px;
+		}
+	}
+
+}
+.TopFooter {
+	display: grid;
+  	grid-template-columns: subgrid;
+
+	> * {
+	  grid-column: 1/-1;
+	  align-items: start;
+	  @screen desktop {
+	 	 grid-column: span 6;
+	 	 align-items: start;
+	}
+
+  }
+}
+.CenterFooter {
+  margin-top: 3rem;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  margin-bottom: 3rem;
+  ul {
+	li {
+	  margin: 0;
+	  list-style: none;
+	}
+  }
+  a {
+	font-size: 16px;
+	color: #add8cc;
+	line-height: 2;
+	&:hover {
+	  text-decoration: underline;
+	}
+  }
+}
+
+.BottomFooter {
+ p {
+   color: #add8cc;
+   font-size: 14px;
+   margin-bottom: 0;
+   font-style: italic;
+ }
+  ul {
+	display: flex;
+	gap: 1.25rem;
+  }
+  a {
+	color: #add8cc;
+	text-transform: unset;
+	text-decoration: none;
+	margin-bottom: 0;
+	border-bottom: none;
+	line-height: 1;
+	font-size: 16px;
+	&:hover {
+	  text-decoration: underline;
+	}
+  }
 }

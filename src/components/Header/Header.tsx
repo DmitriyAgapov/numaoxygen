@@ -11,13 +11,13 @@ function Logo() {
 }
 
 function Menu() {
-	return <ul className={"menu flex gap-4"}>
-		{mockData.header.menu.items.map((item) => <li key={item.title}><Link href={item.link} >{item.title}</Link></li>)}
+	return <ul className={"menu flex gap-4 items-center"}>
+		{mockData.header.menu.items.map((item) => <li className={"m-0"} key={item.title}>{item.link ? <Link href={item.link} className={styles.menuLink}>{item.title}</Link> : <span>|</span>}</li>)}
 	</ul>;
 }
 
 function CTA() {
-	return <ul className={"cta flex gap-4"}>
+	return <ul className={styles.cta + " " + "cta flex gap-4"}>
 		{mockData.header.cta.map((item, index) => <li key={item.title} className={`item-${index}`}><Link href={item.link}>{item.title}</Link></li>)}
 	</ul>;
 }

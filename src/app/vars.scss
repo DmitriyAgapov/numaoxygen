@@ -69,3 +69,21 @@
 	--gridNoMargin:  repeat(var(--totalCol), 1fr) ;
   }
 }
+input:not([type=radio]):not([type=checkbox]):not([type=button]):not([type=image]):not([type=file]), textarea {
+border: 1px solid #29808d;
+border-radius: 13px;
+font-family: "Work Sans", sans-serif;
+font-weight: 400;
+font-size: 16px;
+color: #add8cc;
+padding: 10px 30px;
+outline: 0;
+}
+.num-subscribe__form input {
+  background-color: transparent;
+  border: 1px solid #29808d;
+  border-radius: 13px;
+  padding: 11px 30px 12px;
+  line-height: 1;
+  width: calc(100% - 115px);
+}

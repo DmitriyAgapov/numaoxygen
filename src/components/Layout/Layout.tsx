@@ -18,7 +18,6 @@ const Layout: FC<ChildrenProps> = ({ children, className = '',style }) => {
           <Header/>
             <main>{children}</main>
           <Footer/>
-
       </div>
   )
 }

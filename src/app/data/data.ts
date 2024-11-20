@@ -64,6 +64,10 @@ export interface MockData {
 export const mockData = {
 	config: {
 		url: "https://umaoxigen.com",
+		address: "6 York Street, London, W1U 6QD",
+		phone: "0203 823 1212",
+		email: "info@numaoxygen.com",
+		disclaimer: "Disclaimer: While medical research and studies support the effectiveness of hyperbaric oxygen therapy when used to assist healing in various medical conditions, individual results may vary. There are no guarantees of outcome. Hyperbaric oxygen therapy may not be appropriate for every individual. It may not be applicable to your condition. Always ask your doctor about all treatment options, as well as their risks and benefits, and whether hyperbaric oxygen therapy is appropriate for your condition. Please note that hyperbaric oxygen thereby is not provided for the purpose of treatment of disease, disorder or injury, but as a complementary treatment to alleviate a range of symptoms and support recovery and wellbeing."
 	},
 	header: {
 		menu: {
@@ -89,6 +93,9 @@ export const mockData = {
 					link: "#"
 				},
 				{
+					title: "|"
+				},
+				{
 					title: "FAQs",
 					link: "#"
 				},
@@ -111,7 +118,64 @@ export const mockData = {
 		]
 	},
 	footer: {
+		menu: {
+			items: [
+				{
+					title: "About HBOT",
+					link: "#"
+				},
+				{
+					title: "Who uses HBOT?",
+					link: "#"
+				},
+				{
+					title: "Giving Feedback",
+					link: "#"
+				},
+				{
+					title: "Research and Studies",
+					link: "#"
+				},
+				{
+					title: "FAQ",
+					link: "#"
+				},
+				{
+					title: "Pricing",
+					link: "#"
+				},
+				{
+					title: "Blog",
+					link: "#"
+				},
+				{
+					title: "About NUMA",
+					link: "#"
+				},
+				{
+					title: "Contact Us",
+					link: "#"
+				}
 
+			]
+		},
+		bottomMenu: {
+			items: [
+				{
+					title: "Privacy Policy",
+					link: "#"
+				},
+				{
+					title: "Cookie Policy",
+					link: "#"
+				},
+				{
+					title: "Terms & Conditions",
+					link: "#"
+				}
+
+			]
+		}
 	},
 	pages: {
 		index: {
@@ -213,7 +277,10 @@ export const mockData = {
 					},
 
 				]
-			}
+			},
+			block11 : {
+				bg: "img/block-11-bg.jpg"
+			},
 		}
 	}
 }

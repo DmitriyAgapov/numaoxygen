@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import {Work_Sans, Libre_Baskerville} from "next/font/google"
 import "./globals.scss";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
+const geistSans = Work_Sans({subsets: ["latin"],
   variable: "--font-geist-sans",
-  weight: "100 900",
+  weight: ["100", "400", "900"],
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
+const geistMono = Libre_Baskerville({subsets: ["latin"],
+
   variable: "--font-geist-mono",
-  weight: "100 900",
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {

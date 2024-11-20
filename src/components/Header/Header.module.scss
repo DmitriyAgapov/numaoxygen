@@ -13,3 +13,36 @@
 	@apply flex;
   }
 }
+.menuLink {
+  font-size: 16px;
+  text-decoration: none;
+  transition: color .2s ease;
+  letter-spacing: normal;
+  padding: 0;
+  border-bottom: 0;
+  &:hover {
+    text-decoration: underline;
+    color: #29808d;
+  }
+}
+.cta {
+  align-items: center;
+
+  a {
+    color: #00414c;
+    background-color: #add8cc;
+    font-size: 13px;
+    padding: 6px 10px;
+    border-radius: 18px;
+    text-decoration: none;
+    border-bottom: none;
+
+  }
+  li:nth-child(2) {
+    a {
+      color: #fff;
+      background-color: #29808d;
+      margin-left: 7px;
+    }
+  }
+}
