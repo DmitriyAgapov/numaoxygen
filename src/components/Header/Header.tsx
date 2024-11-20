@@ -7,7 +7,7 @@ import { mockData } from "@/app/data/data"
 import Link from "next/link";
 
 function Logo() {
-	return <Image src={logoImg} alt={""}/>;
+	return <Link href={mockData.config.url}><Image src={logoImg} alt={""}/></Link>;
 }
 
 function Menu() {
