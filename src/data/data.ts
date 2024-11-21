@@ -135,15 +135,15 @@ export const mockData = {
 			items: [
 				{
 					title: "About HBOT",
-					link: "#"
+					link: "hyperbaric-oxygen-therapy"
 				},
 				{
 					title: "Who uses HBOT?",
-					link: "#"
+					link: "resources"
 				},
 				{
 					title: "Giving Feedback",
-					link: "#"
+					link: "feedback"
 				},
 				{
 					title: "Research and Studies",
@@ -151,7 +151,7 @@ export const mockData = {
 				},
 				{
 					title: "FAQ",
-					link: "#"
+					link: "faq"
 				},
 				{
 					title: "Pricing",
@@ -163,7 +163,7 @@ export const mockData = {
 				},
 				{
 					title: "About NUMA",
-					link: "#"
+					link: "about"
 				},
 				{
 					title: "Contact Us",
@@ -486,10 +486,11 @@ export const mockData = {
 		},
 		feedback: {
 			screen: {
+				type: SectionType.page,
 				title: "Feedback at NUMA"
 			},
 			block1: {
-				textHtml: `<div><p class="c2"><span class="c1">Feedback at NUMA</span></p><p class="c2"><span class="c1">At NUMA, we highly value feedback as it helps us continuously improve the care, treatment, and services we offer. Whether you want to share a compliment, raise a concern, or submit a formal complaint, we are committed to listening and responding in a transparent and constructive manner. Rest assured, raising a concern or complaint will not affect your future care.</span></p><h3 class="c9" id="h.4pia5aigcjoc"><span class="c10">Ways to Leave Your Feedback:</span></h3><h4 class="c3" id="h.dru3btp7cb90"><span class="c4">Compliments</span></h4><p class="c2"><span class="c1">If you’d like to express appreciation for the care, treatment, or service you received, we would love to hear from you. Compliments can be shared verbally, in writing, by email, or over the phone. You can send your feedback to the Clinical Manager at info@numaoxygen.com, and we will ensure it’s passed along to the relevant individual.</span></p><h4 class="c3" id="h.ec6kof4vo3fa"><span class="c4">Concerns</span></h4><p class="c2"><span class="c1">If there’s an instance where you feel NUMA hasn’t met your expectations but you don’t wish to file a formal complaint, you can raise a concern with us. This can be done by speaking directly with any member of staff providing your care or with our clinic manager. If you’ve already left NUMA and want to raise a concern afterward, feel free to contact us via the methods below.</span></p><p class="c2"><span class="c1">You can also leave a Google review to share your experience at NUMA.</span></p><h4 class="c3" id="h.e9c4hoclubaw"><span class="c4">Complaints</span></h4><p class="c2"><span class="c1">If you need to make a formal complaint, we’ll ensure it’s handled confidentially and with sensitivity. Complaints can be made in writing or by email, and must be submitted within 12 months of the event or the time you became aware of the issue.</span></p><p class="c2"><span class="c1">How to Make a Complaint:</span></p><ul class="c6 lst-kix_dv9fyru37jqa-0 start"><li class="c0 li-bullet-0"><span class="c1">In Writing or by Email: Please submit your complaint as soon as possible after the event.</span></li><li class="c0 li-bullet-0"><span class="c1">Contact Details for Complaints:</span></li></ul><ul class="c6 lst-kix_dv9fyru37jqa-1 start"><li class="c2 c7 li-bullet-0"><span class="c1">Chloe Aylott, Clinical Manager<br> NUMA Ltd<br> 6 York Street<br> London, W1U 6QD<br> Email: info@numaoxygen.com<br> Phone: 020 8038 9280</span></li></ul><p class="c2"><span class="c1">When we receive your complaint, we will:</span></p><ol class="c6 lst-kix_23cca2gnbklu-0 start" start="1"><li class="c0 li-bullet-0"><span class="c1">Acknowledge Receipt: Within 3 working days, we will confirm receipt of your complaint and provide an expected date for a full response.</span></li><li class="c0 li-bullet-0"><span class="c1">Follow-up: Our Clinical Director or an appropriate team member will contact you by phone to discuss the issue further.</span></li><li class="c0 li-bullet-0"><span class="c1">Written Response: We will send a written response within 20 working days, unless there is an unexpected delay, in which case we will inform you.</span></li></ol><p class="c2"><span class="c1">If you’re making a complaint on behalf of someone else, please provide a completed consent form so we can share confidential details with the complainant.</span></p><h4 class="c3" id="h.3gzniabtogpd"><span class="c4">To Help Us Address Your Feedback:</span></h4><p class="c2"><span class="c1">When submitting feedback, it will help us resolve the matter more efficiently if you provide the following:</span></p><ul class="c6 lst-kix_7277pw9tx4mp-0 start"><li class="c0 li-bullet-0"><span class="c1">Reason for your feedback</span></li><li class="c0 li-bullet-0"><span class="c1">When and how the events occurred</span></li><li class="c0 li-bullet-0"><span class="c1">What actions you’ve already taken (if applicable)</span></li><li class="c0 li-bullet-0"><span class="c1">The outcome you are seeking</span></li></ul><hr><p class="c2 c8"><span class="c1"></span></p><p class="c2"><span class="c1">We appreciate you taking the time to share your thoughts and concerns with us. Your feedback helps us continue to provide the highest quality care to all of our patients. Thank you for trusting NUMA with your health and well-being.</span></p><p class="c2 c8"><span class="c1"></span></p></div>`
+				textHtml: `<div><p class="c2"><span class="c1">At NUMA, we highly value feedback as it helps us continuously improve the care, treatment, and services we offer. Whether you want to share a compliment, raise a concern, or submit a formal complaint, we are committed to listening and responding in a transparent and constructive manner. Rest assured, raising a concern or complaint will not affect your future care.</span></p><h3 class="c9" id="h.4pia5aigcjoc"><span class="c10">Ways to Leave Your Feedback:</span></h3><h4 class="c3" id="h.dru3btp7cb90"><span class="c4">Compliments</span></h4><p class="c2"><span class="c1">If you’d like to express appreciation for the care, treatment, or service you received, we would love to hear from you. Compliments can be shared verbally, in writing, by email, or over the phone. You can send your feedback to the Clinical Manager at info@numaoxygen.com, and we will ensure it’s passed along to the relevant individual.</span></p><h4 class="c3" id="h.ec6kof4vo3fa"><span class="c4">Concerns</span></h4><p class="c2"><span class="c1">If there’s an instance where you feel NUMA hasn’t met your expectations but you don’t wish to file a formal complaint, you can raise a concern with us. This can be done by speaking directly with any member of staff providing your care or with our clinic manager. If you’ve already left NUMA and want to raise a concern afterward, feel free to contact us via the methods below.</span></p><p class="c2"><span class="c1">You can also leave a Google review to share your experience at NUMA.</span></p><h4 class="c3" id="h.e9c4hoclubaw"><span class="c4">Complaints</span></h4><p class="c2"><span class="c1">If you need to make a formal complaint, we’ll ensure it’s handled confidentially and with sensitivity. Complaints can be made in writing or by email, and must be submitted within 12 months of the event or the time you became aware of the issue.</span></p><p class="c2"><span class="c1">How to Make a Complaint:</span></p><ul class="c6 lst-kix_dv9fyru37jqa-0 start"><li class="c0 li-bullet-0"><span class="c1">In Writing or by Email: Please submit your complaint as soon as possible after the event.</span></li><li class="c0 li-bullet-0"><span class="c1">Contact Details for Complaints:</span></li></ul><ul class="c6 lst-kix_dv9fyru37jqa-1 start"><li class="c2 c7 li-bullet-0"><span class="c1">Chloe Aylott, Clinical Manager<br> NUMA Ltd<br> 6 York Street<br> London, W1U 6QD<br> Email: info@numaoxygen.com<br> Phone: 020 8038 9280</span></li></ul><p class="c2"><span class="c1">When we receive your complaint, we will:</span></p><ol class="c6 lst-kix_23cca2gnbklu-0 start" start="1"><li class="c0 li-bullet-0"><span class="c1">Acknowledge Receipt: Within 3 working days, we will confirm receipt of your complaint and provide an expected date for a full response.</span></li><li class="c0 li-bullet-0"><span class="c1">Follow-up: Our Clinical Director or an appropriate team member will contact you by phone to discuss the issue further.</span></li><li class="c0 li-bullet-0"><span class="c1">Written Response: We will send a written response within 20 working days, unless there is an unexpected delay, in which case we will inform you.</span></li></ol><p class="c2"><span class="c1">If you’re making a complaint on behalf of someone else, please provide a completed consent form so we can share confidential details with the complainant.</span></p><h4 class="c3" id="h.3gzniabtogpd"><span class="c4">To Help Us Address Your Feedback:</span></h4><p class="c2"><span class="c1">When submitting feedback, it will help us resolve the matter more efficiently if you provide the following:</span></p><ul class="c6 lst-kix_7277pw9tx4mp-0 start"><li class="c0 li-bullet-0"><span class="c1">Reason for your feedback</span></li><li class="c0 li-bullet-0"><span class="c1">When and how the events occurred</span></li><li class="c0 li-bullet-0"><span class="c1">What actions you’ve already taken (if applicable)</span></li><li class="c0 li-bullet-0"><span class="c1">The outcome you are seeking</span></li></ul><hr><p class="c2 c8"><span class="c1"></span></p><p class="c2"><span class="c1">We appreciate you taking the time to share your thoughts and concerns with us. Your feedback helps us continue to provide the highest quality care to all of our patients. Thank you for trusting NUMA with your health and well-being.</span></p><p class="c2 c8"><span class="c1"></span></p></div>`
 			}
 		}
 	}
