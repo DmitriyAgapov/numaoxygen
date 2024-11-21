@@ -5,11 +5,11 @@ import logoImg from "../../../public/logo.svg"
 import logoImgW from "../../../public/img/logo-white.svg"
 import Image from "next/image";
 
-import { mockData } from "@/app/data/data"
+import { mockData } from "@/data/data"
 import Link from "next/link";
 
 function Logo() {
-	return <Link href={mockData.config.url}><Image src={logoImg} alt={""}/></Link>;
+	return <Link href={"/"}><Image src={logoImg} alt={""}/></Link>;
 }
 function LogoDrawer() {
 	return <div className={styles.logodrawer}><Link href={mockData.config.url}><Image src={logoImgW} alt={""}/></Link></div>;
@@ -27,40 +27,38 @@ function CTA() {
 		{mockData.header.cta.map((item, index) => <li key={item.title} className={`item-${index}`}><Link href={item.link}>{item.title}</Link></li>)}
 	</ul>;
 }
-const Burger = ({state,...props}: {state: boolean}) => {
+const Burger = ({state, onClick, ...props}: {state: boolean, onClick: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void }) => {
 	return (
-		<div className={styles.burger + " " + (state ? " active" : "")} {...props}>
+		<div className={styles.burger + " " + (state ? " active" : "")} onClick={(event) => onClick(event)} {...props}>
 			<span></span>
 			<span></span>
 			<span></span>
 		</div>
 	)
 }
-function Backdrop({state}: {state: boolean }) {
-	return <div className={styles.backdrop}  data-open={state}/>
+const Backdrop = ({state,  ...props}: {state: boolean, onClick: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void }) => {
+	return <div className={styles.backdrop}  data-open={state} onClick={props.onClick} {...props}/>
 }
 function Drawer({ state}: {state: boolean }) {
 	return <nav className={styles.drawer} data-open={state}>
 		<LogoDrawer />
 		<Menu/>
+		<CTA/>
 	</nav>;
 }
 
 const Header = () => {
 	const [state, setState] = useState(false);
 
-
+	const handleChangeDrawerState =  React.useCallback(() => setState((prevState) => !prevState), [])
 	return (
 		<header className={styles.Header}>
 			<Drawer state={state}/>
-			<Backdrop state={state}/>
+			<Backdrop state={state} onClick={handleChangeDrawerState}/>
 			<Logo />
 			<Menu/>
 			<CTA/>
-			<Burger state={state}
-				/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */
-				// @ts-ignore
-				onClick={() => setState((prevState) => !prevState)}/>
+			<Burger state={state} onClick={handleChangeDrawerState}/>
 		</header>
 	);
 };

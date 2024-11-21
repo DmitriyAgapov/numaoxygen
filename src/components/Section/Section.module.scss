@@ -28,7 +28,9 @@
 	margin-top: 75px;
 	text-align: center;
   }
-
+  &[data-sectiontype="page"] {
+	margin-bottom: 1rem;
+  }
   &[data-sectiontype="filled"] {
 	margin: 0;
 	padding: 70px 0 150px;
@@ -51,6 +53,12 @@
 
 	footer {
 	  color: white;
+	  a {
+		border-bottom-color: rgba(255, 255, 255, 0.58);
+		&:hover {
+		  border-bottom-color: rgba(255, 255, 255, 1);
+		}
+	  }
 	}
 
 	& > * {
@@ -107,7 +115,7 @@
 	}
 
 	header > h2 {
-	  font-family: "Work Sans", sans-serif;
+	  font-family: var(--font-geist-sans), sans-serif;
 	  font-size: 28px;
 	  color: #00414c;
 	  line-height: 1.5;
@@ -124,6 +132,15 @@
 	  }
 	}
 
+  }
+  &[class*="features"] {
+	  display: grid;
+	  @screen lg {
+		grid-template-columns: 1fr 1fr;
+	  }
+	figure + div {
+	  flex-direction: column;
+	}
   }
 }
 
@@ -181,5 +198,8 @@
 	article {
 	  text-align: center;
 	}
+  }
+  &[data-cards-direction="vertical"] {
+	flex-direction: column;
   }
 }

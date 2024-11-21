@@ -1,0 +1,72 @@
+[data-route="page-about"] {
+  [data-sectiontype="filled"] {
+	p, cite {
+	  color: white !important;
+	}
+	p:not([class]) {
+	  font-size: 1rem;
+	  line-height: 1.69;
+	  margin: 0 0 30px 0;
+	}
+	blockquote {
+	  &:before {
+		content: '“';
+		left: -50px;
+		top: 0;
+	  }
+	  &:before {
+		font-family: "Libre Baskerville", serif;
+		font-weight: 600;
+		font-size: 56px;
+		line-height: 0;
+		position: absolute;
+	  }
+	  strong {
+		display: block;
+		font-style: normal;
+		text-align: right;
+		margin-top: 20px;
+		width: 100%;
+	  }
+	  font-style: italic;
+	  font-size: 1.75rem;
+	  font-weight: 400;
+	  color: #add8cc;
+	  line-height: 1.43;
+	  position: relative;
+	}
+	cite {
+	  font-size: 18px;
+	  line-height: 1.5;
+	  float: right;
+	}
+  }
+
+  [class*="features"] {
+	gap: 10rem;
+	@screen tablet-max {
+	  gap: 2rem;
+	}
+	figure {
+	  img {
+		height: 100%;
+		object-fit: cover;
+	  }
+	}
+  }
+  [data-cards-direction] {
+	* {
+	  text-align: initial;
+	}
+	h3 {
+	  margin-top: 0;
+	  font-family: var(--font-geist-sans), sans-serif;
+	  text-decoration: underline;
+	  font-weight: 400;
+	  line-height: 2.1;
+	  font-size: 28px;
+
+	  display: inline-block;
+	}
+  }
+}

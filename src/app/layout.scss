@@ -1,3 +1,12 @@
 .default-grid {
 	display: block;
 }
+.card {
+  &[data-cardtype="faq"] {
+	padding: 0;
+	h3 {
+	  text-align: revert;
+	  margin: 1.75rem 0;
+	}
+  }
+}

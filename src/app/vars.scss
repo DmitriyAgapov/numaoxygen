@@ -72,7 +72,7 @@
 input:not([type=radio]):not([type=checkbox]):not([type=button]):not([type=image]):not([type=file]), textarea {
 border: 1px solid #29808d;
 border-radius: 13px;
-font-family: "Work Sans", sans-serif;
+font-family: var(--font-geist-sans), sans-serif;
 font-weight: 400;
 font-size: 16px;
 color: #add8cc;

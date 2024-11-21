@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './Section.module.scss';
-import Link from "next/link";
 import { VideoComponent } from "@/components/Video/Video";
+import Button from "@/components/Button/Button";
+import Image from "next/image";
 
 export type CustomLink = {
 	title: string
@@ -9,7 +10,8 @@ export type CustomLink = {
 }
 export enum SectionType {
 	default = "default",
-	filled = "filled"
+	filled = "filled",
+	page = "page"
 }
 interface SectionProps {
 	video?: {
@@ -18,14 +20,21 @@ interface SectionProps {
 	title?: string
 	description?: string | React.ReactNode
 	bg?: unknown
-	cards?: never[]
+	img?: {
+		width?: number
+		height?: number
+		className?: string
+		src: string
+		alt: string
+	}
+	cards?: any
 	textHtml?: React.ReactNode
 	link?: CustomLink
 	className?: string
 	type?: SectionType
 }
 
-const Section = ({title,video, textHtml, description, bg, cards, link, className = "", type = SectionType.default}:SectionProps) => {
+const Section = ({title,video, textHtml, description, img, bg, cards, link, className = "", type = SectionType.default}:SectionProps) => {
 	console.log(title, description, bg, cards, link, className)
 	const isOnlyBg = () => {
 		let value = false;
@@ -44,15 +53,22 @@ const Section = ({title,video, textHtml, description, bg, cards, link, className
 			{description && <article>
 				{description}
 			</article>}
+			{img && <figure className={img.className}>
+				<Image {...img}/>
+			</figure>}
+
 			{textHtml && <article>
 				<div dangerouslySetInnerHTML={{ __html: textHtml}}></div>
 			</article>}
 			{video && <VideoComponent src={video.src} /> }
-			{cards && <div className={styles.cards}>
+			{cards && <div className={styles.cards} data-cards-direction={cards.some(el => {
+
+				return el.props['data-cardtype'] === "faq" || el.props.el?.type === "faq"
+			}) ? "vertical" : "horizontal"}>
 				{cards}
 			</div>}
 			{link && <footer>
-				<Link href={link.link}>{link.title}</Link>
+				<Button src={link.link} title={link.title}/>
 			</footer>}
 		</section>
 	);

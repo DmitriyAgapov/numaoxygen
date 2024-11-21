@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Footer.module.scss';
-import { mockData } from "@/app/data/data";
+import { mockData } from "@/data/data";
 import Link from "next/link";
 
 const TopFooter = () => <div className={styles.TopFooter}>
@@ -50,7 +50,7 @@ const TopFooter = () => <div className={styles.TopFooter}>
 
 </div>
 const BottomFooter = () => <div className={styles.BottomFooter}>
-	<p className={'m-0'}>{mockData.config.disclaimer}</p>
+	<p className={'m-0'} dangerouslySetInnerHTML={{__html:mockData.config.disclaimer}}/>
 	<ul>
 		{mockData.footer.bottomMenu.items.map((el, index) => <li key={el.link + index}><Link href={el.link as string}>{el.title}</Link></li>)}
 	</ul>

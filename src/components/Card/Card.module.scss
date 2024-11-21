@@ -1,0 +1,63 @@
+.Card {
+	display: revert;
+}
+
+.faq {
+
+}
+
+.CardFaq {
+  display: block;
+  padding: 0;
+
+  h3 {
+	text-align: revert;
+	font-size: 18px;
+
+	position: relative;
+
+	color: #03414c;
+	cursor: pointer;
+	letter-spacing: .7px;
+	margin: 1.75rem 0;
+  }
+
+  ul {
+	list-style: revert;
+	margin: revert;
+	padding: revert;
+	padding-left: 1.75rem;
+  }
+
+  li {
+	&::marker {
+
+	}
+
+	margin: revert;
+	padding: revert;
+  }
+  &[data-open="false"] {
+    header + div {
+      max-height: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+  }
+  &[data-open="true"] {
+
+  }
+}
+
+.cardfaqheader {
+  cursor: pointer;
+  display: flex;
+  border-bottom: solid 2px #03414c;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0 !important;
+
+
+}

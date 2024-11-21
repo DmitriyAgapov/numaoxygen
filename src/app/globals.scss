@@ -1,5 +1,6 @@
 @import "./layout.scss";
 @import "./vars.scss";
+@import "./pages.scss";
 
 @tailwind base;
 @tailwind components;
@@ -9,18 +10,18 @@
   --background: #ffffff;
   --foreground: #171717;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+//
+//@media (prefers-color-scheme: dark) {
+//  :root {
+//    --background: #0a0a0a;
+//    --foreground: #ededed;
+//  }
+//}
 
 body {
   color: var(--fontColor);
   background: var(--background);
-  font-family: "Work Sans", sans-serif;
+  font-family: var(--font-geist-sans), sans-serif;
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.5;
@@ -34,10 +35,39 @@ li {
 h2 {
   font-size: 50px;
 }
+h3 {
+  font-size: 32px;
+  margin: 2.5rem 0 1.75rem;
+}
+h4 {
+  font-size: 24px;
+  margin: 1.75rem 0 1.125rem;
+}
+
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Libre Baskerville", serif;
+  font-family: var(--font-geist-mono), sans-serif;
   font-weight: 600;
   color: #03414c;
   word-break: break-word;
   margin-bottom: 15px;
+}
+article {
+  ul {
+    list-style: revert;
+    margin: revert;
+    padding: revert;
+    padding-left: 1.75rem;
+  }
+  li {
+    &::marker {
+
+    }
+
+    margin: revert;
+    padding: revert;
+  }
+}
+blockquote {
+  margin: 0 0 1rem;
 }

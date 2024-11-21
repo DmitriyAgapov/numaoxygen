@@ -4,7 +4,7 @@ import "./globals.scss";
 
 const geistSans = Work_Sans({subsets: ["latin"],
   variable: "--font-geist-sans",
-  weight: ["100", "400", "900"],
+  weight: ["100", "400", "700", "900"],
 });
 const geistMono = Libre_Baskerville({subsets: ["latin"],
 

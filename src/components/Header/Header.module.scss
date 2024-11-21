@@ -146,19 +146,23 @@
   }
   &[data-open="true"] {
     padding-top: 5rem;
-    ul {
-
+    ul:first-of-type {
       display: block;
       margin: 1.5rem;
+      li {
+        margin: 1rem 0;
+        a {
+          color: white;
+          font-family: var(--font-geist-sans), sans-serif;
+          font-weight: 400;
+          font-size: 1.5rem;
+        }
+      }
     }
-    li {
-      margin: 1rem 0;
-    }
-    a {
-      color: white;
-      font-family: "Work Sans", sans-serif;
-      font-weight: 400;
-      font-size: 1.5rem;
+
+    ul:last-of-type {
+      display: flex;
+      margin: 1.5rem;
     }
 
   }

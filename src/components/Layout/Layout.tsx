@@ -2,8 +2,9 @@ import React, { FC, ReactNode } from 'react'
 import styles from './Layout.module.scss'
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import Main from "@/components/Layout/Main";
 
-interface ChildrenProps {
+export interface ChildrenProps {
   children: ReactNode | ReactNode[]
   className?: string
   headerContent?: ReactNode | ReactNode[]
@@ -11,12 +12,14 @@ interface ChildrenProps {
   style?: never
 }
 
+
 const Layout: FC<ChildrenProps> = ({ children, className = '',style }) => {
 
   return (
-      <div style={style} className={styles.Layout + ' ' + className}>
+      <div style={style}
+          className={styles.Layout + ' ' + className}>
           <Header/>
-            <main>{children}</main>
+          <Main >{children}</Main>
           <Footer/>
       </div>
   )
