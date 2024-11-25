@@ -8,11 +8,13 @@ export type CustomLink = {
 	title: string
 	link: string
 }
+
 export enum SectionType {
 	default = "default",
 	filled = "filled",
 	page = "page"
 }
+
 interface SectionProps {
 	video?: {
 		src: string
@@ -34,19 +36,21 @@ interface SectionProps {
 	type?: SectionType
 }
 
-const Section = ({title,video, textHtml, description, img, bg, cards, link, className = "", type = SectionType.default}:SectionProps) => {
-	console.log(title, description, bg, cards, link, className)
+const Section = ({ title, video, textHtml, description, img, bg, cards, link, className = "", type = SectionType.default }: SectionProps) => {
+	// console.log(title, description, bg, cards, link, className)
 	const isOnlyBg = () => {
 		let value = false;
-		const ar =  [title,video, textHtml, description, cards, link];
+		const ar = [ title, video, textHtml, description, cards, link ];
 		ar.forEach(el => {
-			if(el) value = true;
+			if (el) value = true;
 		})
 		return !value ? "max-h-72 tablet-max:!min-h-64" : ""
 	}
 	const currentBg = isOnlyBg();
 	return (
-		<section data-sectiontype={type} className={styles.Section + " " + className + currentBg} style={bg ? {margin:0,backgroundSize: "cover", gridColumn: "1/-1",backgroundPosition: "center center", backgroundImage: `url(${bg})`, minHeight: "620px"} : {}}>
+		<section data-sectiontype={type}
+			className={styles.Section + " " + className + currentBg}
+			style={bg ? { margin: 0, backgroundSize: "cover", gridColumn: "1/-1", backgroundPosition: "center center", backgroundImage: `url(${bg})`, minHeight: "620px" } : {}}>
 			{title && <header>
 				<h2>{title}</h2>
 			</header>}
@@ -58,17 +62,19 @@ const Section = ({title,video, textHtml, description, img, bg, cards, link, clas
 			</figure>}
 
 			{textHtml && <article>
-				<div dangerouslySetInnerHTML={{ __html: textHtml}}></div>
+				<div dangerouslySetInnerHTML={{ __html: textHtml }}></div>
 			</article>}
-			{video && <VideoComponent src={video.src} /> }
-			{cards && <div className={styles.cards} data-cards-direction={cards.some(el => {
+			{video && <VideoComponent src={video.src}/>}
+			{cards && <div className={styles.cards}
+				data-cards-direction={cards.some(el => {
 
-				return el.props['data-cardtype'] === "faq" || el.props.el?.type === "faq"
-			}) ? "vertical" : "horizontal"}>
+					return el.props['data-cardtype'] === "faq" || el.props.el?.type === "faq"
+				}) ? "vertical" : "horizontal"}>
 				{cards}
 			</div>}
 			{link && <footer>
-				<Button src={link.link} title={link.title}/>
+				<Button src={link.link}
+					title={link.title}/>
 			</footer>}
 		</section>
 	);

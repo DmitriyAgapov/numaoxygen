@@ -1,4 +1,5 @@
 import { SectionType } from "@/components/Section/Section";
+
 export interface CardProps extends Section {
 	textHtml: React.ReactNode;
 	video: {
@@ -79,9 +80,33 @@ export const mockData = {
 		url: "https://umaoxigen.com",
 		address: "6 York Street, London, W1U 6QD",
 		phone: "0203 823 1212",
-		email: "info@numaoxygen.com",
+		email: "info@UMAoxygen.com",
 		disclaimer: "<strong>Disclaimer:</strong> While medical research supports the effectiveness of Hyperbaric Oxygen Therapy (HBOT) in aiding the healing process for various conditions, individual results may vary, and outcomes are not guaranteed. HBOT may not be suitable for everyone, and its application may not be appropriate for your specific condition. We strongly recommend consulting with your healthcare provider to discuss all treatment options, along with their associated risks and benefits, to determine whether HBOT is right for you. Please note that Hyperbaric Oxygen Therapy is not intended to treat disease, disorder, or injury directly. It is offered as a complementary treatment to support recovery, alleviate symptoms, and promote overall wellbeing."
 	},
+	forms: [
+		{
+			title: "Online booking",
+			inputs: [
+				{
+					label: "First name",
+					name: "first_name"
+				},
+				{
+					label: "Last name",
+					name: "last_name"
+				},
+				{
+					label: "Phone number",
+					name: "phone"
+				},
+				{
+					label: "Email",
+					name: "email",
+					type: "email"
+				}
+			]
+		}
+	],
 	header: {
 		menu: {
 			items: [
@@ -94,12 +119,12 @@ export const mockData = {
 					link: "resources"
 				},
 				{
-					title: "About NUMA",
+					title: "About UMA",
 					link: "about"
 				},
 				{
 					title: "Pricing",
-					link: "Pricing"
+					link: "#"
 				},
 				{
 					title: "Blog",
@@ -122,7 +147,7 @@ export const mockData = {
 		cta: [
 			{
 				title: "Online Booking",
-				link: "#"
+				link: "/forms/1"
 			},
 			{
 				title: "Call 0203 823 1212",
@@ -162,7 +187,7 @@ export const mockData = {
 					link: "#"
 				},
 				{
-					title: "About NUMA",
+					title: "About UMA",
 					link: "about"
 				},
 				{
@@ -192,12 +217,16 @@ export const mockData = {
 	},
 	pages: {
 		index: {
+			metadata: {
+				title: "UMA: Hyperbaric Oxygen Therapy",
+				description: "UMA is a CQC-registered clinic led by experienced doctors, specializing in Hyperbaric Oxygen Therapy (HBOT). Known for its state-of-the-art facilities and exceptional patient care, UMA uses medical-grade chambers to provide effective and safe treatment."
+			},
 			screen: {
 				bg: "/img/index-bg.jpg"
 			},
 			block1: {
-				title: "NUMA: Hyperbaric Oxygen Therapy",
-				description: "NUMA is a CQC-registered clinic led by experienced doctors, specializing in Hyperbaric Oxygen Therapy (HBOT). Known for its state-of-the-art facilities and exceptional patient care, NUMA uses medical-grade chambers to provide effective and safe treatment."
+				title: "UMA: Hyperbaric Oxygen Therapy",
+				description: "UMA is a CQC-registered clinic led by experienced doctors, specializing in Hyperbaric Oxygen Therapy (HBOT). Known for its state-of-the-art facilities and exceptional patient care, UMA uses medical-grade chambers to provide effective and safe treatment."
 			},
 			block2: {
 				bg: "/img/block-2-bg.jpg"
@@ -217,8 +246,8 @@ export const mockData = {
 				}
 			},
 			block5: {
-				title: "What You Receive at NUMA",
-				textHtml: `<div class="num-content__text"><p><strong>Medical Expertise</strong>: NUMA is led by Dr. Nur Ozyilmaz, a former NHS Consultant with over 25 years of medical experience, ensuring you receive the highest standard of care.</p> <p><strong>Technical Excellence</strong>: Our skilled engineering team is dedicated to maintaining and optimizing our eight medical-grade Hyperbaric Oxygen Chambers. To provide the best possible treatment, we use specialized BIBS masks, ensuring both patient comfort and maximum therapeutic benefit.</p> <p><strong>Regulated Service</strong>: NUMA is fully licensed, accredited, and adheres to the highest professional ethical standards. We are CQC registered and proud members of the Undersea and Hyperbaric Medical Society (UHMS) and the European Underwater and Baromedical Society (EUROBAC).</p> <p><strong>Outstanding care</strong>:At NUMA, we prioritize compassionate and personalized care. Our patient care managers are committed to supporting you throughout your entire treatment journey, ensuring a positive and seamless experience, as reflected in our patient testimonials.</p></div>`
+				title: "What You Receive at UMA",
+				textHtml: `<div class="num-content__text"><p><strong>Medical Expertise</strong>: UMA is led by Dr. Nur Ozyilmaz, a former NHS Consultant with over 25 years of medical experience, ensuring you receive the highest standard of care.</p> <p><strong>Technical Excellence</strong>: Our skilled engineering team is dedicated to maintaining and optimizing our eight medical-grade Hyperbaric Oxygen Chambers. To provide the best possible treatment, we use specialized BIBS masks, ensuring both patient comfort and maximum therapeutic benefit.</p> <p><strong>Regulated Service</strong>: UMA is fully licensed, accredited, and adheres to the highest professional ethical standards. We are CQC registered and proud members of the Undersea and Hyperbaric Medical Society (UHMS) and the European Underwater and Baromedical Society (EUROBAC).</p> <p><strong>Outstanding care</strong>:At UMA, we prioritize compassionate and personalized care. Our patient care managers are committed to supporting you throughout your entire treatment journey, ensuring a positive and seamless experience, as reflected in our patient testimonials.</p></div>`
 			},
 			block6: {
 				title: "Reviews"
@@ -268,7 +297,7 @@ export const mockData = {
 				]
 			},
 			block10: {
-				title: "NUMA Partners & Membership",
+				title: "UMA Partners & Membership",
 				type: SectionType.filled,
 				className: "logos",
 				cards: [
@@ -295,6 +324,10 @@ export const mockData = {
 			},
 		},
 		'hyperbaric-oxygen-therapy': {
+			metadata: {
+				title: "What is Hyperbaric Oxygen Therapy?",
+				description: "Hyperbaric Oxygen Therapy (HBOT) is a specialized, non-invasive treatment in which patients inhale 100% oxygen inside a hyperbaric chamber that is pressurized to levels higher than normal atmospheric pressure. This therapy works by increasing the amount of oxygen delivered to tissues throughout the body, which can help with healing and recovery."
+			},
 			block1: {
 				title: "What is Hyperbaric Oxygen Therapy?",
 				textHtml: `<div> <p>Hyperbaric Oxygen Therapy (HBOT) is a specialized, non-invasive treatment in which patients inhale 100% oxygen inside a hyperbaric chamber that is pressurized to levels higher than normal atmospheric pressure. This therapy works by increasing the amount of oxygen delivered to tissues throughout the body, which can help with healing and recovery.</p> <h3>Key Mechanisms of Action:</h3> <ul> <li><strong>Hyperoxygenation:</strong>Under increased pressure, breathing pure oxygen enhances the oxygen concentration in the bloodstream, lymph, and cerebrospinal fluid, raising oxygen levels by up to 1200% compared to normal breathing at sea level.</li> <li><strong>Anti-inflammatory:</strong> HBOT reduces inflammation by modulating immune responses. It decreases the release of pro-inflammatory cytokines (such as IL-1, IL-6, and TNF-α) and increases the anti-inflammatory cytokine IL-10.</li>  <li><strong>Reduction of swelling:</strong>The higher oxygen levels cause blood vessels to constrict temporarily, helping to reduce swelling without compromising oxygen delivery to tissues.</li> <li><strong>Stem cell mobilisation:</strong> HBOT has been shown to significantly increase the concentration of circulating stem cells, which play a key role in tissue repair and regeneration.</li> <li><strong>Angiogenesis:</strong>Hyperbaric oxygen therapy stimulates the formation of new blood vessels (angiogenesis), aiding in the repair and recovery of damaged tissues.</li> <li><strong>Antimicrobial mechanisms:</strong> HBOT improves white blood cell function, enhances antibiotic effectiveness by facilitating penetration through bacterial membranes, and helps to limit toxin release in certain infections.</li> <li><strong>Regeneration mechanisms:</strong> HBOT accelerates the recovery of damaged tissues, including bone, collagen, ligaments, and tendons, promoting overall healing and regeneration.</li> </ul><h3>Safety and Considerations:</h3><p>When administered correctly, it is generally considered safe and well tolerated. However, like any form of therapy, there are rare but potential risks involved and it may not be suitable for every individual or health condition.</p> <p>Therefore, it is important for hyperbaric oxygen therapy to be administered by qualified healthcare providers under the supervision of an experienced medical doctor with specialised knowledge in this area and a thorough understanding of its uses, limitations, and potential side effects.</p></div>`
@@ -304,15 +337,23 @@ export const mockData = {
 			},
 		},
 		resources: {
+			metadata: {
+				title: "Who Uses Hyperbaric Oxygen Therapy (HBOT)?",
+				description: "At UMA, we offer Hyperbaric Oxygen Therapy to individuals seeking therapeutic benefits for a range of conditions."
+			},
 			block1: {
 				title: "Who Uses Hyperbaric Oxygen Therapy (HBOT)?",
-				textHtml: `<p>At NUMA, we offer Hyperbaric Oxygen Therapy to individuals seeking therapeutic benefits for a range of conditions. Common reasons people seek HBOT include:</p> <ul> <li aria-level="1">General Health and Wellness: Healthy individuals looking to improve overall wellness through the therapeutic effects of oxygen.</li> <li aria-level="1">Sports Performance &amp; Recovery: Athletes and active individuals using HBOT to enhance performance and speed up recovery from injuries.</li> <li aria-level="1">Post-Surgery Healing: Supporting recovery after surgery and promoting faster wound healing.</li> <li aria-level="1">Traumatic Brain Injury &amp; Concussions: Assisting recovery and cognitive function following brain injuries, including concussions.</li> <li aria-level="1">Sensorineural Hearing Loss: Helping those with hearing loss caused by nerve damage.</li> <li aria-level="1">Inflammatory Bowel Disease: Supporting conditions like Crohn's disease and ulcerative colitis.</li> <li aria-level="1">Chronic Fatigue &amp; Fibromyalgia: Managing symptoms of conditions such as fibromyalgia, chronic fatigue syndrome (ME), and other related disorders.</li> <li aria-level="1">Stroke Rehabilitation: Promoting recovery and rehabilitation after a stroke.</li> <li aria-level="1">Lyme Disease: Aiding treatment for Lyme disease and its related symptoms.</li> <li aria-level="1">Interstitial Cystitis: Helping individuals with this painful bladder condition.</li> <li aria-level="1">Chronic Inflammatory Conditions: Offering relief for conditions marked by persistent inflammation.</li> <li aria-level="1">Delayed Radiation Injuries: Supporting recovery from soft tissue and bone necrosis following radiation therapy.</li> </ul> <h3>Global Indications for Hyperbaric Oxygen Therapy</h3> <p>In 2016, the European Committee for Hyperbaric Medicine (ECHM) updated the list of approved indications for HBOT. The Undersea and Hyperbaric Medical Society (UHMS) also publishes a comprehensive list of globally recognized conditions for which HBOT is used. These include:</p> <ul> <li aria-level="1">Air or Gas Embolism</li> <li aria-level="1">Carbon Monoxide Poisoning</li> <li aria-level="1">Gas Gangrene</li> <li aria-level="1">Compartment Syndrome</li> <li aria-level="1">Crush Injury</li> <li aria-level="1">Traumatic Ischemias</li> <li aria-level="1">Decompression Sickness (The Bends)</li> <li aria-level="1">Arterial Insufficiency</li> <li aria-level="1">Severe Anemia</li> <li aria-level="1">Intracranial Abscess</li> <li aria-level="1">Necrotizing Soft Tissue Infection</li> <li aria-level="1">Refractory Osteomyelitis</li> <li aria-level="1">Delayed Radiation Injury (Soft Tissue and Bone Necrosis)</li> <li aria-level="1">Compromised Grafts and Flaps</li> <li aria-level="1">Acute Thermal Burns</li> <li aria-level="1">Sudden Idiopathic Sensorineural Hearing Loss</li> </ul> <h3>NHS Coverage in the UK</h3> <p>In the UK, the NHS currently funds Hyperbaric Oxygen Therapy (HBOT) for the following conditions:</p> <ul> <li aria-level="1">Decompression Illness</li> <li aria-level="1">Arterial Gas Embolism</li> </ul><h3>Important Legal Disclaimer:</h3><p>In compliance with UK and EU regulations, we wish to clarify that Hyperbaric Oxygen Therapy is not intended to cure or prevent any disease. The information on this website&mdash;including research, case studies, articles, and other content&mdash;is for educational purposes only. Please note that research findings may vary between individuals and are not universally applicable. This website is not a substitute for professional medical advice or treatment. For any diagnosis or treatment, we recommend consulting with a qualified healthcare provider.</p>`
+				textHtml: `<p>At UMA, we offer Hyperbaric Oxygen Therapy to individuals seeking therapeutic benefits for a range of conditions. Common reasons people seek HBOT include:</p> <ul> <li aria-level="1">General Health and Wellness: Healthy individuals looking to improve overall wellness through the therapeutic effects of oxygen.</li> <li aria-level="1">Sports Performance &amp; Recovery: Athletes and active individuals using HBOT to enhance performance and speed up recovery from injuries.</li> <li aria-level="1">Post-Surgery Healing: Supporting recovery after surgery and promoting faster wound healing.</li> <li aria-level="1">Traumatic Brain Injury &amp; Concussions: Assisting recovery and cognitive function following brain injuries, including concussions.</li> <li aria-level="1">Sensorineural Hearing Loss: Helping those with hearing loss caused by nerve damage.</li> <li aria-level="1">Inflammatory Bowel Disease: Supporting conditions like Crohn's disease and ulcerative colitis.</li> <li aria-level="1">Chronic Fatigue &amp; Fibromyalgia: Managing symptoms of conditions such as fibromyalgia, chronic fatigue syndrome (ME), and other related disorders.</li> <li aria-level="1">Stroke Rehabilitation: Promoting recovery and rehabilitation after a stroke.</li> <li aria-level="1">Lyme Disease: Aiding treatment for Lyme disease and its related symptoms.</li> <li aria-level="1">Interstitial Cystitis: Helping individuals with this painful bladder condition.</li> <li aria-level="1">Chronic Inflammatory Conditions: Offering relief for conditions marked by persistent inflammation.</li> <li aria-level="1">Delayed Radiation Injuries: Supporting recovery from soft tissue and bone necrosis following radiation therapy.</li> </ul> <h3>Global Indications for Hyperbaric Oxygen Therapy</h3> <p>In 2016, the European Committee for Hyperbaric Medicine (ECHM) updated the list of approved indications for HBOT. The Undersea and Hyperbaric Medical Society (UHMS) also publishes a comprehensive list of globally recognized conditions for which HBOT is used. These include:</p> <ul> <li aria-level="1">Air or Gas Embolism</li> <li aria-level="1">Carbon Monoxide Poisoning</li> <li aria-level="1">Gas Gangrene</li> <li aria-level="1">Compartment Syndrome</li> <li aria-level="1">Crush Injury</li> <li aria-level="1">Traumatic Ischemias</li> <li aria-level="1">Decompression Sickness (The Bends)</li> <li aria-level="1">Arterial Insufficiency</li> <li aria-level="1">Severe Anemia</li> <li aria-level="1">Intracranial Abscess</li> <li aria-level="1">Necrotizing Soft Tissue Infection</li> <li aria-level="1">Refractory Osteomyelitis</li> <li aria-level="1">Delayed Radiation Injury (Soft Tissue and Bone Necrosis)</li> <li aria-level="1">Compromised Grafts and Flaps</li> <li aria-level="1">Acute Thermal Burns</li> <li aria-level="1">Sudden Idiopathic Sensorineural Hearing Loss</li> </ul> <h3>NHS Coverage in the UK</h3> <p>In the UK, the NHS currently funds Hyperbaric Oxygen Therapy (HBOT) for the following conditions:</p> <ul> <li aria-level="1">Decompression Illness</li> <li aria-level="1">Arterial Gas Embolism</li> </ul><h3>Important Legal Disclaimer:</h3><p>In compliance with UK and EU regulations, we wish to clarify that Hyperbaric Oxygen Therapy is not intended to cure or prevent any disease. The information on this website&mdash;including research, case studies, articles, and other content&mdash;is for educational purposes only. Please note that research findings may vary between individuals and are not universally applicable. This website is not a substitute for professional medical advice or treatment. For any diagnosis or treatment, we recommend consulting with a qualified healthcare provider.</p>`
 			},
 			block11 : {
 				bg: "/img/block-11-bg.jpg"
 			},
 		},
 		about: {
+			metadata: {
+				title: "About",
+				description: ""
+			},
 			screen: {
 				bg: "/img/about-bg.jpg"
 			},
@@ -322,10 +363,10 @@ export const mockData = {
 				cards: [
 					{
 						className: "*:text-white",
-						textHtml: `<div><blockquote>At NUMA, we provide Hyperbaric Oxygen Therapy at the highest standards, blending integrity, honesty, and compassion into every aspect of our care. We are privileged to support your health and recovery, <strong>one breath at a time.</strong></blockquote><cite>- Dr. Nur Ozyilmaz MD, Founder, NUMA</cite></div>`
+						textHtml: `<div><blockquote>At UMA, we provide Hyperbaric Oxygen Therapy at the highest standards, blending integrity, honesty, and compassion into every aspect of our care. We are privileged to support your health and recovery, <strong>one breath at a time.</strong></blockquote><cite>- Dr. Nur Ozyilmaz MD, Founder, UMA</cite></div>`
 					},
 					{
-						textHtml: `<p>Located in the heart of London's Marylebone, NUMA is a leading CQC-registered clinic specializing in Hyperbaric Oxygen Therapy. Our clinic is led by a highly qualified team using advanced hyperbaric chambers, and we take pride in offering expert-led, holistic care for each patient. Your wellbeing is our top priority.</p>`
+						textHtml: `<p>Located in the heart of London's Marylebone, UMA is a leading CQC-registered clinic specializing in Hyperbaric Oxygen Therapy. Our clinic is led by a highly qualified team using advanced hyperbaric chambers, and we take pride in offering expert-led, holistic care for each patient. Your wellbeing is our top priority.</p>`
 					}
 				]
 			},
@@ -359,14 +400,14 @@ export const mockData = {
 			},
 			block4: {
 				type: SectionType.filled,
-				title: "NUMA’s Journey",
-				textHtml: `<div><p class="c0">The inspiration for NUMA came from a deeply personal experience. At age four, I suffered an accident and subsequent surgery that left a lasting impact on my health. The care and compassion I received during my recovery inspired me to pursue a career in medicine. I soon realized that there is no greater kindness than easing pain and helping people heal.</p><p class="c0"><span>While my career in the NHS was thriving, my own health was deteriorating due to chronic migraines caused by a head injury I sustained in my teens. Despite access to the best specialists and treatments in the UK, no one could alleviate my symptoms.</span></p><p class="c0"><span>Determined to find a solution, I sought alternative treatments beyond conventional medicine. I attended global conferences, consulted with experts, and explored cutting-edge approaches in nutrition, acupuncture, regenerative medicine, and hyperbaric oxygen therapy. Over time, I experienced miraculous improvements in my health, and my migraines disappeared.</span></p><p class="c0"><span>This journey taught me that while conventional medicine is crucial for many, patients with chronic conditions often need a more holistic, personalized approach. Motivated by my own experience, I decided to set up an integrative health clinic to help others facing similar struggles.</span></p><p class="c0"><span>In 2017, I met Jacques, a successful businessman and philanthropist, who came to me seeking answers for the complex medical issues that had affected him after a traumatic motorbike accident. After enduring a series of medical setbacks, including encephalitis, and being told by doctors around the world that there were no further options, Jacques was at a crossroads. By incorporating hyperbaric oxygen therapy into his treatment plan, along with other therapies, Jacques began his recovery journey.</span></p><p class="c0"><span>Over two years, Jacques and I worked closely together, sharing our values and passion for helping others. After many conversations, we realized our shared vision for a clinic that combines the best of conventional and integrative medicine. This is how NUMA was born.</span></p><p class="c0"><span>At NUMA, we understand the profound impact that chronic illness can have on people's lives. We recognize the importance of using the best science and the latest research, but we also know that every patient is unique and deserves personalized care. We take the time to understand each patient's needs, challenges, and goals, so we can provide tailored solutions to help them achieve the life they deserve.</span></p><p class="c0"><span>We feel truly honored to be a part of your journey to health and happiness.</span></p><p class="c0"><span>— </span><span>Dr. Nur Ozyilmaz MD, Founder, NUMA</span></p></div>`
+				title: "UMA’s Journey",
+				textHtml: `<div><p class="c0">The inspiration for UMA came from a deeply personal experience. At age four, I suffered an accident and subsequent surgery that left a lasting impact on my health. The care and compassion I received during my recovery inspired me to pursue a career in medicine. I soon realized that there is no greater kindness than easing pain and helping people heal.</p><p class="c0"><span>While my career in the NHS was thriving, my own health was deteriorating due to chronic migraines caused by a head injury I sustained in my teens. Despite access to the best specialists and treatments in the UK, no one could alleviate my symptoms.</span></p><p class="c0"><span>Determined to find a solution, I sought alternative treatments beyond conventional medicine. I attended global conferences, consulted with experts, and explored cutting-edge approaches in nutrition, acupuncture, regenerative medicine, and hyperbaric oxygen therapy. Over time, I experienced miraculous improvements in my health, and my migraines disappeared.</span></p><p class="c0"><span>This journey taught me that while conventional medicine is crucial for many, patients with chronic conditions often need a more holistic, personalized approach. Motivated by my own experience, I decided to set up an integrative health clinic to help others facing similar struggles.</span></p><p class="c0"><span>In 2017, I met Jacques, a successful businessman and philanthropist, who came to me seeking answers for the complex medical issues that had affected him after a traumatic motorbike accident. After enduring a series of medical setbacks, including encephalitis, and being told by doctors around the world that there were no further options, Jacques was at a crossroads. By incorporating hyperbaric oxygen therapy into his treatment plan, along with other therapies, Jacques began his recovery journey.</span></p><p class="c0"><span>Over two years, Jacques and I worked closely together, sharing our values and passion for helping others. After many conversations, we realized our shared vision for a clinic that combines the best of conventional and integrative medicine. This is how UMA was born.</span></p><p class="c0"><span>At UMA, we understand the profound impact that chronic illness can have on people's lives. We recognize the importance of using the best science and the latest research, but we also know that every patient is unique and deserves personalized care. We take the time to understand each patient's needs, challenges, and goals, so we can provide tailored solutions to help them achieve the life they deserve.</span></p><p class="c0"><span>We feel truly honored to be a part of your journey to health and happiness.</span></p><p class="c0"><span>— </span><span>Dr. Nur Ozyilmaz MD, Founder, UMA</span></p></div>`
 			},
 			block11 : {
 				bg: "/img/about-last.webp"
 			},
 			block10: {
-				title: "NUMA Partners & Membership",
+				title: "UMA Partners & Membership",
 				type: SectionType.filled,
 				className: "logos",
 				cards: [
@@ -390,6 +431,10 @@ export const mockData = {
 			},
 		},
 		faq: {
+			metadata: {
+				title: "F.A.Q",
+				description: "faq"
+			},
 			screen: {
 				type: SectionType.page,
 				title: "Frequently Asked Questions (FAQ)"
@@ -409,12 +454,12 @@ export const mockData = {
 					{
 						title: "Is Hyperbaric Oxygen Therapy right for you?",
 						type: "faq",
-						textHtml: `<p>At NUMA, we offer a consultant-led service, where each new patient undergoes a face-to-face assessment to determine if HBOT is appropriate. This allows our physician to assess your medical history and current condition to design a personalized treatment plan based on the latest clinical research.</p>`
+						textHtml: `<p>At UMA, we offer a consultant-led service, where each new patient undergoes a face-to-face assessment to determine if HBOT is appropriate. This allows our physician to assess your medical history and current condition to design a personalized treatment plan based on the latest clinical research.</p>`
 					},
 					{
-						title: "What are the typical reasons for people to visit NUMA?",
+						title: "What are the typical reasons for people to visit UMA?",
 						type: "faq",
-						textHtml: `<p class="c1">&nbsp;Patients visit NUMA for a variety of conditions, including:</p><ul><li class="c0 li-bullet-0"><span class="c3">General Health &amp; Wellness:</span><span class="c1">&nbsp;Healthy individuals seeking therapeutic benefits.</span></li><li class="c0 li-bullet-0"><span class="c6 c3">Sports Performance &amp; Injury Recovery</span></li><li class="c0 li-bullet-0"><span class="c6 c3">Post-Surgical Recovery &amp; Wound Healing</span></li><li class="c0 li-bullet-0"><span class="c6 c3">Concussions &amp; Traumatic Brain Injuries</span></li><li class="c0 li-bullet-0"><span class="c6 c3">Sensorineural Hearing Loss</span></li><li class="c0 li-bullet-0"><span class="c3">Inflammatory Bowel Diseases</span><span class="c1">&nbsp;(Crohn’s disease, Ulcerative Colitis)</span></li><li class="c0 li-bullet-0"><span class="c6 c3">Fibromyalgia, ME, &amp; Chronic Fatigue Syndrome</span></li><li class="c0 li-bullet-0"><span class="c6 c3">Stroke Rehabilitation</span></li><li class="c0 li-bullet-0"><span class="c6 c3">Lyme Disease</span></li><li class="c0 li-bullet-0"><span class="c6 c3">Interstitial Cystitis</span></li><li class="c0 li-bullet-0"><span class="c6 c3">Chronic Inflammatory Conditions</span></li><li class="c0 li-bullet-0"><span class="c3">Delayed Radiation Injuries</span><span class="c1">&nbsp;(Soft Tissue and Bone Necrosis)</span></li></ul>`
+						textHtml: `<p class="c1">&nbsp;Patients visit UMA for a variety of conditions, including:</p><ul><li class="c0 li-bullet-0"><span class="c3">General Health &amp; Wellness:</span><span class="c1">&nbsp;Healthy individuals seeking therapeutic benefits.</span></li><li class="c0 li-bullet-0"><span class="c6 c3">Sports Performance &amp; Injury Recovery</span></li><li class="c0 li-bullet-0"><span class="c6 c3">Post-Surgical Recovery &amp; Wound Healing</span></li><li class="c0 li-bullet-0"><span class="c6 c3">Concussions &amp; Traumatic Brain Injuries</span></li><li class="c0 li-bullet-0"><span class="c6 c3">Sensorineural Hearing Loss</span></li><li class="c0 li-bullet-0"><span class="c3">Inflammatory Bowel Diseases</span><span class="c1">&nbsp;(Crohn’s disease, Ulcerative Colitis)</span></li><li class="c0 li-bullet-0"><span class="c6 c3">Fibromyalgia, ME, &amp; Chronic Fatigue Syndrome</span></li><li class="c0 li-bullet-0"><span class="c6 c3">Stroke Rehabilitation</span></li><li class="c0 li-bullet-0"><span class="c6 c3">Lyme Disease</span></li><li class="c0 li-bullet-0"><span class="c6 c3">Interstitial Cystitis</span></li><li class="c0 li-bullet-0"><span class="c6 c3">Chronic Inflammatory Conditions</span></li><li class="c0 li-bullet-0"><span class="c3">Delayed Radiation Injuries</span><span class="c1">&nbsp;(Soft Tissue and Bone Necrosis)</span></li></ul>`
 					},
 					{
 						title: "What happens during a Hyperbaric Oxygen Therapy treatment?",
@@ -447,9 +492,9 @@ export const mockData = {
 						textHtml: `<p>The number and frequency of treatments will vary based on the condition being treated. Some conditions may require just five sessions, while others might need 20-30 treatments over several weeks. For many conditions, treatments are typically scheduled once a day, Monday to Friday, for about four to six weeks.</p>`
 					},
 					{
-						title: "What type of chamber does NUMA use?",
+						title: "What type of chamber does UMA use?",
 						type: "faq",
-						textHtml: `<p>NUMA uses Medical Grade Monoplace Hyperbaric Chambers, designed to accommodate a single patient at a time. These chambers are pressurized with medical-grade air, and oxygen is delivered via a special BIBS mask. The chambers have a clear acrylic window for easy monitoring, and patients can communicate with the chamber operator through an intercom system.</p>`
+						textHtml: `<p>UMA uses Medical Grade Monoplace Hyperbaric Chambers, designed to accommodate a single patient at a time. These chambers are pressurized with medical-grade air, and oxygen is delivered via a special BIBS mask. The chambers have a clear acrylic window for easy monitoring, and patients can communicate with the chamber operator through an intercom system.</p>`
 					},
 					{
 						title: "Is HBOT safe?",
@@ -469,7 +514,7 @@ export const mockData = {
 					{
 						title: "How are patients referred for treatment?",
 						type: "faq",
-						textHtml: `<p>Patients can refer themselves or be referred by their physician. All patients undergo an evaluation by our physician, who will create a customized treatment protocol. To schedule an evaluation, you can call us at +44 020 3823 1212 or email info@numaoxygen.com.</p>`
+						textHtml: `<p>Patients can refer themselves or be referred by their physician. All patients undergo an evaluation by our physician, who will create a customized treatment protocol. To schedule an evaluation, you can call us at +44 020 3823 1212 or email info@UMAoxygen.com.</p>`
 					},
 					{
 						title: "Are hyperbaric oxygen therapy treatments covered by insurance?",
@@ -485,12 +530,16 @@ export const mockData = {
 			}
 		},
 		feedback: {
+			metadata: {
+				title: "Feedback",
+				description: "Feedback"
+			},
 			screen: {
 				type: SectionType.page,
-				title: "Feedback at NUMA"
+				title: "Feedback at UMA"
 			},
 			block1: {
-				textHtml: `<div><p class="c2"><span class="c1">At NUMA, we highly value feedback as it helps us continuously improve the care, treatment, and services we offer. Whether you want to share a compliment, raise a concern, or submit a formal complaint, we are committed to listening and responding in a transparent and constructive manner. Rest assured, raising a concern or complaint will not affect your future care.</span></p><h3 class="c9" id="h.4pia5aigcjoc"><span class="c10">Ways to Leave Your Feedback:</span></h3><h4 class="c3" id="h.dru3btp7cb90"><span class="c4">Compliments</span></h4><p class="c2"><span class="c1">If you’d like to express appreciation for the care, treatment, or service you received, we would love to hear from you. Compliments can be shared verbally, in writing, by email, or over the phone. You can send your feedback to the Clinical Manager at info@numaoxygen.com, and we will ensure it’s passed along to the relevant individual.</span></p><h4 class="c3" id="h.ec6kof4vo3fa"><span class="c4">Concerns</span></h4><p class="c2"><span class="c1">If there’s an instance where you feel NUMA hasn’t met your expectations but you don’t wish to file a formal complaint, you can raise a concern with us. This can be done by speaking directly with any member of staff providing your care or with our clinic manager. If you’ve already left NUMA and want to raise a concern afterward, feel free to contact us via the methods below.</span></p><p class="c2"><span class="c1">You can also leave a Google review to share your experience at NUMA.</span></p><h4 class="c3" id="h.e9c4hoclubaw"><span class="c4">Complaints</span></h4><p class="c2"><span class="c1">If you need to make a formal complaint, we’ll ensure it’s handled confidentially and with sensitivity. Complaints can be made in writing or by email, and must be submitted within 12 months of the event or the time you became aware of the issue.</span></p><p class="c2"><span class="c1">How to Make a Complaint:</span></p><ul class="c6 lst-kix_dv9fyru37jqa-0 start"><li class="c0 li-bullet-0"><span class="c1">In Writing or by Email: Please submit your complaint as soon as possible after the event.</span></li><li class="c0 li-bullet-0"><span class="c1">Contact Details for Complaints:</span></li></ul><ul class="c6 lst-kix_dv9fyru37jqa-1 start"><li class="c2 c7 li-bullet-0"><span class="c1">Chloe Aylott, Clinical Manager<br> NUMA Ltd<br> 6 York Street<br> London, W1U 6QD<br> Email: info@numaoxygen.com<br> Phone: 020 8038 9280</span></li></ul><p class="c2"><span class="c1">When we receive your complaint, we will:</span></p><ol class="c6 lst-kix_23cca2gnbklu-0 start" start="1"><li class="c0 li-bullet-0"><span class="c1">Acknowledge Receipt: Within 3 working days, we will confirm receipt of your complaint and provide an expected date for a full response.</span></li><li class="c0 li-bullet-0"><span class="c1">Follow-up: Our Clinical Director or an appropriate team member will contact you by phone to discuss the issue further.</span></li><li class="c0 li-bullet-0"><span class="c1">Written Response: We will send a written response within 20 working days, unless there is an unexpected delay, in which case we will inform you.</span></li></ol><p class="c2"><span class="c1">If you’re making a complaint on behalf of someone else, please provide a completed consent form so we can share confidential details with the complainant.</span></p><h4 class="c3" id="h.3gzniabtogpd"><span class="c4">To Help Us Address Your Feedback:</span></h4><p class="c2"><span class="c1">When submitting feedback, it will help us resolve the matter more efficiently if you provide the following:</span></p><ul class="c6 lst-kix_7277pw9tx4mp-0 start"><li class="c0 li-bullet-0"><span class="c1">Reason for your feedback</span></li><li class="c0 li-bullet-0"><span class="c1">When and how the events occurred</span></li><li class="c0 li-bullet-0"><span class="c1">What actions you’ve already taken (if applicable)</span></li><li class="c0 li-bullet-0"><span class="c1">The outcome you are seeking</span></li></ul><hr><p class="c2 c8"><span class="c1"></span></p><p class="c2"><span class="c1">We appreciate you taking the time to share your thoughts and concerns with us. Your feedback helps us continue to provide the highest quality care to all of our patients. Thank you for trusting NUMA with your health and well-being.</span></p><p class="c2 c8"><span class="c1"></span></p></div>`
+				textHtml: `<div><p class="c2"><span class="c1">At UMA, we highly value feedback as it helps us continuously improve the care, treatment, and services we offer. Whether you want to share a compliment, raise a concern, or submit a formal complaint, we are committed to listening and responding in a transparent and constructive manner. Rest assured, raising a concern or complaint will not affect your future care.</span></p><h3 class="c9" id="h.4pia5aigcjoc"><span class="c10">Ways to Leave Your Feedback:</span></h3><h4 class="c3" id="h.dru3btp7cb90"><span class="c4">Compliments</span></h4><p class="c2"><span class="c1">If you’d like to express appreciation for the care, treatment, or service you received, we would love to hear from you. Compliments can be shared verbally, in writing, by email, or over the phone. You can send your feedback to the Clinical Manager at info@UMAoxygen.com, and we will ensure it’s passed along to the relevant individual.</span></p><h4 class="c3" id="h.ec6kof4vo3fa"><span class="c4">Concerns</span></h4><p class="c2"><span class="c1">If there’s an instance where you feel UMA hasn’t met your expectations but you don’t wish to file a formal complaint, you can raise a concern with us. This can be done by speaking directly with any member of staff providing your care or with our clinic manager. If you’ve already left UMA and want to raise a concern afterward, feel free to contact us via the methods below.</span></p><p class="c2"><span class="c1">You can also leave a Google review to share your experience at UMA.</span></p><h4 class="c3" id="h.e9c4hoclubaw"><span class="c4">Complaints</span></h4><p class="c2"><span class="c1">If you need to make a formal complaint, we’ll ensure it’s handled confidentially and with sensitivity. Complaints can be made in writing or by email, and must be submitted within 12 months of the event or the time you became aware of the issue.</span></p><p class="c2"><span class="c1">How to Make a Complaint:</span></p><ul class="c6 lst-kix_dv9fyru37jqa-0 start"><li class="c0 li-bullet-0"><span class="c1">In Writing or by Email: Please submit your complaint as soon as possible after the event.</span></li><li class="c0 li-bullet-0"><span class="c1">Contact Details for Complaints:</span></li></ul><ul class="c6 lst-kix_dv9fyru37jqa-1 start"><li class="c2 c7 li-bullet-0"><span class="c1">Chloe Aylott, Clinical Manager<br> UMA Ltd<br> 6 York Street<br> London, W1U 6QD<br> Email: info@UMAoxygen.com<br> Phone: 020 8038 9280</span></li></ul><p class="c2"><span class="c1">When we receive your complaint, we will:</span></p><ol class="c6 lst-kix_23cca2gnbklu-0 start" start="1"><li class="c0 li-bullet-0"><span class="c1">Acknowledge Receipt: Within 3 working days, we will confirm receipt of your complaint and provide an expected date for a full response.</span></li><li class="c0 li-bullet-0"><span class="c1">Follow-up: Our Clinical Director or an appropriate team member will contact you by phone to discuss the issue further.</span></li><li class="c0 li-bullet-0"><span class="c1">Written Response: We will send a written response within 20 working days, unless there is an unexpected delay, in which case we will inform you.</span></li></ol><p class="c2"><span class="c1">If you’re making a complaint on behalf of someone else, please provide a completed consent form so we can share confidential details with the complainant.</span></p><h4 class="c3" id="h.3gzniabtogpd"><span class="c4">To Help Us Address Your Feedback:</span></h4><p class="c2"><span class="c1">When submitting feedback, it will help us resolve the matter more efficiently if you provide the following:</span></p><ul class="c6 lst-kix_7277pw9tx4mp-0 start"><li class="c0 li-bullet-0"><span class="c1">Reason for your feedback</span></li><li class="c0 li-bullet-0"><span class="c1">When and how the events occurred</span></li><li class="c0 li-bullet-0"><span class="c1">What actions you’ve already taken (if applicable)</span></li><li class="c0 li-bullet-0"><span class="c1">The outcome you are seeking</span></li></ul><hr><p class="c2 c8"><span class="c1"></span></p><p class="c2"><span class="c1">We appreciate you taking the time to share your thoughts and concerns with us. Your feedback helps us continue to provide the highest quality care to all of our patients. Thank you for trusting UMA with your health and well-being.</span></p><p class="c2 c8"><span class="c1"></span></p></div>`
 			}
 		}
 	}

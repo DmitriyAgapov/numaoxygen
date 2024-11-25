@@ -12,6 +12,8 @@
 	  display: grid;
 	  grid-column: 1/-1;
 	  grid-template-columns: subgrid;
+	  align-self: stretch;
+	  min-height: 44dvh;
 	}
 	@supports not (grid-template-columns: subgrid) {
 	  grid-template-columns: var(--grid);

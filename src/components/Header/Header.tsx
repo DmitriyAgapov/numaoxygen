@@ -24,7 +24,7 @@ function Menu() {
 
 function CTA() {
 	return <ul className={styles.cta + " " + "cta  hidden desktop:flex gap-4"}>
-		{mockData.header.cta.map((item, index) => <li key={item.title} className={`item-${index}`}><Link href={item.link}>{item.title}</Link></li>)}
+		{mockData.header.cta.map((item, index) => <li key={item.title} className={`item-${index}`}><Link href={item.link} passHref>{item.title}</Link></li>)}
 	</ul>;
 }
 const Burger = ({state, onClick, ...props}: {state: boolean, onClick: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void }) => {
@@ -39,8 +39,8 @@ const Burger = ({state, onClick, ...props}: {state: boolean, onClick: (event: Re
 const Backdrop = ({state,  ...props}: {state: boolean, onClick: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void }) => {
 	return <div className={styles.backdrop}  data-open={state} onClick={props.onClick} {...props}/>
 }
-function Drawer({ state}: {state: boolean }) {
-	return <nav className={styles.drawer} data-open={state}>
+function Drawer({state, action}: {state: boolean, action: () => void  }) {
+	return <nav className={styles.drawer} data-open={state} onClick={action}>
 		<LogoDrawer />
 		<Menu/>
 		<CTA/>
@@ -52,8 +52,8 @@ const Header = () => {
 
 	const handleChangeDrawerState =  React.useCallback(() => setState((prevState) => !prevState), [])
 	return (
-		<header className={styles.Header}>
-			<Drawer state={state}/>
+		<header className={styles.Header} >
+			<Drawer state={state} action={handleChangeDrawerState}/>
 			<Backdrop state={state} onClick={handleChangeDrawerState}/>
 			<Logo />
 			<Menu/>

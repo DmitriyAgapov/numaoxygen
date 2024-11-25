@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
-
+// @ts-ignore
+import formz from "./formz";
+const form = formz
 export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -25,5 +27,7 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    form
+  ],
 } satisfies Config;

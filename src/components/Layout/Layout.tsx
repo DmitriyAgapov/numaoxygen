@@ -13,7 +13,7 @@ export interface ChildrenProps {
 }
 
 
-const Layout: FC<ChildrenProps> = ({ children, className = '',style }) => {
+const Layout: FC<ChildrenProps> = ({ children, className = '', style }) => {
 
   return (
       <div style={style}
