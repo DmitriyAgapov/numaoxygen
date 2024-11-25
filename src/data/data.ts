@@ -236,7 +236,7 @@ export const mockData = {
 				description: "Hyperbaric Oxygen Therapy (HBOT) is a non-invasive, specialized treatment where patients breathe 100% oxygen inside a hyperbaric chamber, which is pressurized to levels higher than normal air pressure. This increased pressure allows the blood plasma to absorb significantly more oxygen—up to 10-15 times the normal amount—promoting healing and recovery.",
 				link: {
 					title: "ABOUT HBOT ",
-					link: "#"
+					link: "hyperbaric-oxygen-therapy"
 				}
 			},
 			block4: {
@@ -278,7 +278,7 @@ export const mockData = {
 				],
 				link: {
 					title: "LEARN MORE",
-					link: "#"
+					link: "resources"
 				}
 			},
 			block9: {
