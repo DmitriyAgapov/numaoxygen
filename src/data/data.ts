@@ -13,6 +13,7 @@ export interface CardProps extends Section {
 	}
 	description: string;
 	type: string
+	options?: any[]
 }
 export interface Config {
 	url: string;
@@ -124,12 +125,12 @@ export const mockData = {
 				},
 				{
 					title: "Pricing",
-					link: "#"
+					link: "pricing"
 				},
-				{
-					title: "Blog",
-					link: "blog"
-				},
+				// {
+				// 	title: "Blog",
+				// 	link: "blog"
+				// },
 				{
 					title: "|"
 				},
@@ -180,12 +181,12 @@ export const mockData = {
 				},
 				{
 					title: "Pricing",
-					link: "#"
+					link: "pricing"
 				},
-				{
-					title: "Blog",
-					link: "#"
-				},
+				// {
+				// 	title: "Blog",
+				// 	link: "#"
+				// },
 				{
 					title: "About UMA",
 					link: "about"
@@ -247,7 +248,7 @@ export const mockData = {
 			},
 			block5: {
 				title: "What You Receive at UMA",
-				textHtml: `<div class="num-content__text"><p><strong>Medical Expertise</strong>: UMA is led by Dr. Nur Ozyilmaz, a former NHS Consultant with over 25 years of medical experience, ensuring you receive the highest standard of care.</p> <p><strong>Technical Excellence</strong>: Our skilled engineering team is dedicated to maintaining and optimizing our eight medical-grade Hyperbaric Oxygen Chambers. To provide the best possible treatment, we use specialized BIBS masks, ensuring both patient comfort and maximum therapeutic benefit.</p> <p><strong>Regulated Service</strong>: UMA is fully licensed, accredited, and adheres to the highest professional ethical standards. We are CQC registered and proud members of the Undersea and Hyperbaric Medical Society (UHMS) and the European Underwater and Baromedical Society (EUROBAC).</p> <p><strong>Outstanding care</strong>:At UMA, we prioritize compassionate and personalized care. Our patient care managers are committed to supporting you throughout your entire treatment journey, ensuring a positive and seamless experience, as reflected in our patient testimonials.</p></div>`
+				textHtml: `<div class="num-content__text"><p><strong>Medical Expertise</strong>: UMA is led by Dr. David Cassidy, a former NHS Consultant with over 25 years of medical experience, ensuring you receive the highest standard of care.</p> <p><strong>Technical Excellence</strong>: Our skilled engineering team is dedicated to maintaining and optimizing our eight medical-grade Hyperbaric Oxygen Chambers. To provide the best possible treatment, we use specialized BIBS masks, ensuring both patient comfort and maximum therapeutic benefit.</p> <p><strong>Regulated Service</strong>: UMA is fully licensed, accredited, and adheres to the highest professional ethical standards. We are CQC registered and proud members of the Undersea and Hyperbaric Medical Society (UHMS).</p> <p><strong>Outstanding care</strong>:At UMA, we prioritize compassionate and personalized care. Our patient care managers are committed to supporting you throughout your entire treatment journey, ensuring a positive and seamless experience, as reflected in our patient testimonials.</p></div>`
 			},
 			block6: {
 				title: "Reviews"
@@ -281,21 +282,21 @@ export const mockData = {
 					link: "resources"
 				}
 			},
-			block9: {
-				title: "Testimonials",
-				cards: [
-					{
-						video: {
-							src: "https://www.youtube.com/watch?v=J-6gadz24f8"
-						}
-					},
-					{
-						video: {
-							src: "https://www.youtube.com/watch?v=-uaEGT5dRQU"
-						}
-					}
-				]
-			},
+			// block9: {
+			// 	title: "Testimonials",
+			// 	cards: [
+			// 		{
+			// 			video: {
+			// 				src: "https://www.youtube.com/watch?v=J-6gadz24f8"
+			// 			}
+			// 		},
+			// 		{
+			// 			video: {
+			// 				src: "https://www.youtube.com/watch?v=-uaEGT5dRQU"
+			// 			}
+			// 		}
+			// 	]
+			// },
 			block10: {
 				title: "UMA Partners & Membership",
 				type: SectionType.filled,
@@ -363,7 +364,7 @@ export const mockData = {
 				cards: [
 					{
 						className: "*:text-white",
-						textHtml: `<div><blockquote>At UMA, we provide Hyperbaric Oxygen Therapy at the highest standards, blending integrity, honesty, and compassion into every aspect of our care. We are privileged to support your health and recovery, <strong>one breath at a time.</strong></blockquote><cite>- Dr. Nur Ozyilmaz MD, Founder, UMA</cite></div>`
+						textHtml: `<div><blockquote>At UMA, we provide Hyperbaric Oxygen Therapy at the highest standards, blending integrity, honesty, and compassion into every aspect of our care. We are privileged to support your health and recovery, <strong>one breath at a time.</strong></blockquote><cite>- Dr. David Cassidy MD, Founder, UMA</cite></div>`
 					},
 					{
 						textHtml: `<p>Located in the heart of London's Marylebone, UMA is a leading CQC-registered clinic specializing in Hyperbaric Oxygen Therapy. Our clinic is led by a highly qualified team using advanced hyperbaric chambers, and we take pride in offering expert-led, holistic care for each patient. Your wellbeing is our top priority.</p>`
@@ -395,13 +396,13 @@ export const mockData = {
 				]
 			},
 			block3: {
-				title: "About Dr. Nur Ozyilmaz",
-				textHtml: `<p>Dr. Nur Ozyilmaz is a former NHS Consultant with over 25 years of experience in medicine, trained in the UK. After six years in emergency medicine, she specialized in paediatrics and nephrology, receiving training at prestigious institutions such as King’s College, Great Ormond Street, and St Thomas' Hospital in London. Dr. Nur later pursued further postgraduate studies in regenerative and integrative medicine in the USA, developing a special interest in Hyperbaric Oxygen Therapy.</p><p>Her diverse expertise in both conventional and integrative medicine makes Dr. Nur uniquely qualified to offer comprehensive, patient-centered care. By combining the best methodologies from both disciplines, she incorporates hyperbaric oxygen therapy into her treatments to deliver optimal outcomes for her patients.</p>`
+				title: "About Dr. David Cassidy",
+				textHtml: `<p>Dr. David Cassidy is a former NHS Consultant with over 25 years of experience in medicine, trained in the UK. After six years in emergency medicine, she specialized in paediatrics and nephrology, receiving training at prestigious institutions such as King’s College, Great Ormond Street, and St Thomas' Hospital in London. Dr. David Cassidy later pursued further postgraduate studies in regenerative and integrative medicine in the USA, developing a special interest in Hyperbaric Oxygen Therapy.</p><p>Her diverse expertise in both conventional and integrative medicine makes Dr. David  uniquely qualified to offer comprehensive, patient-centered care. By combining the best methodologies from both disciplines, she incorporates hyperbaric oxygen therapy into her treatments to deliver optimal outcomes for her patients.</p>`
 			},
 			block4: {
 				type: SectionType.filled,
 				title: "UMA’s Journey",
-				textHtml: `<div><p class="c0">The inspiration for UMA came from a deeply personal experience. At age four, I suffered an accident and subsequent surgery that left a lasting impact on my health. The care and compassion I received during my recovery inspired me to pursue a career in medicine. I soon realized that there is no greater kindness than easing pain and helping people heal.</p><p class="c0"><span>While my career in the NHS was thriving, my own health was deteriorating due to chronic migraines caused by a head injury I sustained in my teens. Despite access to the best specialists and treatments in the UK, no one could alleviate my symptoms.</span></p><p class="c0"><span>Determined to find a solution, I sought alternative treatments beyond conventional medicine. I attended global conferences, consulted with experts, and explored cutting-edge approaches in nutrition, acupuncture, regenerative medicine, and hyperbaric oxygen therapy. Over time, I experienced miraculous improvements in my health, and my migraines disappeared.</span></p><p class="c0"><span>This journey taught me that while conventional medicine is crucial for many, patients with chronic conditions often need a more holistic, personalized approach. Motivated by my own experience, I decided to set up an integrative health clinic to help others facing similar struggles.</span></p><p class="c0"><span>In 2017, I met Jacques, a successful businessman and philanthropist, who came to me seeking answers for the complex medical issues that had affected him after a traumatic motorbike accident. After enduring a series of medical setbacks, including encephalitis, and being told by doctors around the world that there were no further options, Jacques was at a crossroads. By incorporating hyperbaric oxygen therapy into his treatment plan, along with other therapies, Jacques began his recovery journey.</span></p><p class="c0"><span>Over two years, Jacques and I worked closely together, sharing our values and passion for helping others. After many conversations, we realized our shared vision for a clinic that combines the best of conventional and integrative medicine. This is how UMA was born.</span></p><p class="c0"><span>At UMA, we understand the profound impact that chronic illness can have on people's lives. We recognize the importance of using the best science and the latest research, but we also know that every patient is unique and deserves personalized care. We take the time to understand each patient's needs, challenges, and goals, so we can provide tailored solutions to help them achieve the life they deserve.</span></p><p class="c0"><span>We feel truly honored to be a part of your journey to health and happiness.</span></p><p class="c0"><span>— </span><span>Dr. Nur Ozyilmaz MD, Founder, UMA</span></p></div>`
+				textHtml: `<div><p class="c0">The inspiration for UMA came from a deeply personal experience. At age four, I suffered an accident and subsequent surgery that left a lasting impact on my health. The care and compassion I received during my recovery inspired me to pursue a career in medicine. I soon realized that there is no greater kindness than easing pain and helping people heal.</p><p class="c0"><span>While my career in the NHS was thriving, my own health was deteriorating due to chronic migraines caused by a head injury I sustained in my teens. Despite access to the best specialists and treatments in the UK, no one could alleviate my symptoms.</span></p><p class="c0"><span>Determined to find a solution, I sought alternative treatments beyond conventional medicine. I attended global conferences, consulted with experts, and explored cutting-edge approaches in nutrition, acupuncture, regenerative medicine, and hyperbaric oxygen therapy. Over time, I experienced miraculous improvements in my health, and my migraines disappeared.</span></p><p class="c0"><span>This journey taught me that while conventional medicine is crucial for many, patients with chronic conditions often need a more holistic, personalized approach. Motivated by my own experience, I decided to set up an integrative health clinic to help others facing similar struggles.</span></p><p class="c0"><span>In 2017, I met Jacques, a successful businessman and philanthropist, who came to me seeking answers for the complex medical issues that had affected him after a traumatic motorbike accident. After enduring a series of medical setbacks, including encephalitis, and being told by doctors around the world that there were no further options, Jacques was at a crossroads. By incorporating hyperbaric oxygen therapy into his treatment plan, along with other therapies, Jacques began his recovery journey.</span></p><p class="c0"><span>Over two years, Jacques and I worked closely together, sharing our values and passion for helping others. After many conversations, we realized our shared vision for a clinic that combines the best of conventional and integrative medicine. This is how UMA was born.</span></p><p class="c0"><span>At UMA, we understand the profound impact that chronic illness can have on people's lives. We recognize the importance of using the best science and the latest research, but we also know that every patient is unique and deserves personalized care. We take the time to understand each patient's needs, challenges, and goals, so we can provide tailored solutions to help them achieve the life they deserve.</span></p><p class="c0"><span>We feel truly honored to be a part of your journey to health and happiness.</span></p><p class="c0"><span>— </span><span>Dr. David Cassidy MD, Founder, UMA</span></p></div>`
 			},
 			block11 : {
 				bg: "/img/about-last.webp"
@@ -541,6 +542,191 @@ export const mockData = {
 			block1: {
 				textHtml: `<div><p class="c2"><span class="c1">At UMA, we highly value feedback as it helps us continuously improve the care, treatment, and services we offer. Whether you want to share a compliment, raise a concern, or submit a formal complaint, we are committed to listening and responding in a transparent and constructive manner. Rest assured, raising a concern or complaint will not affect your future care.</span></p><h3 class="c9" id="h.4pia5aigcjoc"><span class="c10">Ways to Leave Your Feedback:</span></h3><h4 class="c3" id="h.dru3btp7cb90"><span class="c4">Compliments</span></h4><p class="c2"><span class="c1">If you’d like to express appreciation for the care, treatment, or service you received, we would love to hear from you. Compliments can be shared verbally, in writing, by email, or over the phone. You can send your feedback to the Clinical Manager at info@UMAoxygen.com, and we will ensure it’s passed along to the relevant individual.</span></p><h4 class="c3" id="h.ec6kof4vo3fa"><span class="c4">Concerns</span></h4><p class="c2"><span class="c1">If there’s an instance where you feel UMA hasn’t met your expectations but you don’t wish to file a formal complaint, you can raise a concern with us. This can be done by speaking directly with any member of staff providing your care or with our clinic manager. If you’ve already left UMA and want to raise a concern afterward, feel free to contact us via the methods below.</span></p><p class="c2"><span class="c1">You can also leave a Google review to share your experience at UMA.</span></p><h4 class="c3" id="h.e9c4hoclubaw"><span class="c4">Complaints</span></h4><p class="c2"><span class="c1">If you need to make a formal complaint, we’ll ensure it’s handled confidentially and with sensitivity. Complaints can be made in writing or by email, and must be submitted within 12 months of the event or the time you became aware of the issue.</span></p><p class="c2"><span class="c1">How to Make a Complaint:</span></p><ul class="c6 lst-kix_dv9fyru37jqa-0 start"><li class="c0 li-bullet-0"><span class="c1">In Writing or by Email: Please submit your complaint as soon as possible after the event.</span></li><li class="c0 li-bullet-0"><span class="c1">Contact Details for Complaints:</span></li></ul><ul class="c6 lst-kix_dv9fyru37jqa-1 start"><li class="c2 c7 li-bullet-0"><span class="c1">Chloe Aylott, Clinical Manager<br> UMA Ltd<br> 6 York Street<br> London, W1U 6QD<br> Email: info@UMAoxygen.com<br> Phone: 020 8038 9280</span></li></ul><p class="c2"><span class="c1">When we receive your complaint, we will:</span></p><ol class="c6 lst-kix_23cca2gnbklu-0 start" start="1"><li class="c0 li-bullet-0"><span class="c1">Acknowledge Receipt: Within 3 working days, we will confirm receipt of your complaint and provide an expected date for a full response.</span></li><li class="c0 li-bullet-0"><span class="c1">Follow-up: Our Clinical Director or an appropriate team member will contact you by phone to discuss the issue further.</span></li><li class="c0 li-bullet-0"><span class="c1">Written Response: We will send a written response within 20 working days, unless there is an unexpected delay, in which case we will inform you.</span></li></ol><p class="c2"><span class="c1">If you’re making a complaint on behalf of someone else, please provide a completed consent form so we can share confidential details with the complainant.</span></p><h4 class="c3" id="h.3gzniabtogpd"><span class="c4">To Help Us Address Your Feedback:</span></h4><p class="c2"><span class="c1">When submitting feedback, it will help us resolve the matter more efficiently if you provide the following:</span></p><ul class="c6 lst-kix_7277pw9tx4mp-0 start"><li class="c0 li-bullet-0"><span class="c1">Reason for your feedback</span></li><li class="c0 li-bullet-0"><span class="c1">When and how the events occurred</span></li><li class="c0 li-bullet-0"><span class="c1">What actions you’ve already taken (if applicable)</span></li><li class="c0 li-bullet-0"><span class="c1">The outcome you are seeking</span></li></ul><hr><p class="c2 c8"><span class="c1"></span></p><p class="c2"><span class="c1">We appreciate you taking the time to share your thoughts and concerns with us. Your feedback helps us continue to provide the highest quality care to all of our patients. Thank you for trusting UMA with your health and well-being.</span></p><p class="c2 c8"><span class="c1"></span></p></div>`
 			}
+		},
+		pricing: {
+			metadata: {
+				title: "What is Hyperbaric Oxygen Therapy?",
+				description: "Hyperbaric Oxygen Therapy (HBOT) is a specialized, non-invasive treatment in which patients inhale 100% oxygen inside a hyperbaric chamber that is pressurized to levels higher than normal atmospheric pressure. This therapy works by increasing the amount of oxygen delivered to tissues throughout the body, which can help with healing and recovery."
+			},
+			block2: {
+				title: "Pricing",
+				className: "pricing",
+				cards: [
+					{
+						type: "pricing",
+						title: "30 minutes",
+						description: "Hyperbaric Oxygen Therapy",
+						options: [
+							{
+								label: "Single",
+								old_value: null,
+								value: 150
+							},
+							{
+								label: 3,
+								old_value: 450,
+								value: 400
+							},
+							{
+								label: 5,
+								old_value: 750,
+								value: 650
+							},
+							{
+								label: 10,
+								old_value: 1500,
+								value: 1200
+							},
+							{
+								label: 20,
+								old_value: 3000,
+								value: 2300
+							}
+						]
+					},
+					{
+						type: "pricing",
+						title: "60 minutes",
+						description: "Hyperbaric Oxygen Therapy",
+						options: [
+							{
+								label: "Single",
+								old_value: null,
+								value: 250
+							},
+							{
+								label: 3,
+								old_value: 750,
+								value: 700
+							},
+							{
+								label: 5,
+								old_value: 1250,
+								value: 1150
+							},
+							{
+								label: 10,
+								old_value: 2500,
+								value: 2200
+							},
+							{
+								label: 20,
+								old_value: 5000,
+								value: 4000
+							},
+							{
+								label: 40,
+								old_value: 10000,
+								value: 7500
+							}
+						]
+					},
+					{
+						type: "pricing",
+						title: "90 minutes",
+						description: "Hyperbaric Oxygen Therapy",
+						options: [
+							{
+								label: "Single",
+								old_value: null,
+								value: 300
+							},
+							{
+								label: 3,
+								old_value: 900,
+								value: 825
+							},
+							{
+								label: 5,
+								old_value: 1500,
+								value: 1300
+							},
+							{
+								label: 10,
+								old_value: 3000,
+								value: 2500
+							},
+							{
+								label: 20,
+								old_value: 6000,
+								value: 4500
+							},
+							{
+								label: 40,
+								old_value: 12000,
+								value: 8000
+							}
+						]
+					},
+					{
+						type: "pricing",
+						title: "120 minutes",
+						description: "Hyperbaric Oxygen Therapy",
+						options: [
+							{
+								label: "Single",
+								old_value: null,
+								value: 400
+							},
+							{
+								label: 3,
+								old_value: 1200,
+								value: 1140
+							},
+							{
+								label: 5,
+								old_value: 2000,
+								value: 1875
+							},
+							{
+								label: 10,
+								old_value: 4000,
+								value: 3600
+							},
+							{
+								label: 20,
+								old_value: 8000,
+								value: 6800
+							},
+							{
+								label: 40,
+								old_value: 16000,
+								value: 13000
+							}
+						]
+					}
+
+
+				]
+			},
+
+
+		},
+		contacts: {
+			metadata: {
+				title: "Get in touch",
+				description: ""
+			},
+			block1: {
+				title: "Get in touch",
+				className: "getin",
+				textHtml: `<div class="location-address"> <p>We are located at:</p> <p><a href="https://www.google.com/maps/place/Oxynergy2+Hyperbaric+Oxygen+Longevity+%26+Recovery+Center/@34.065626,-118.373628,16z/data=!4m6!3m5!1s0x80c2b921e8e2a1cd:0xdd0c99cd0a5472e1!8m2!3d34.0656264!4d-118.3736276!16s%2Fg%2F11s97pklgy?hl=en&amp;entry=ttu" target="_blank" rel="noopener"><b>113 N. San Vicente Blvd. 2nd Floor.</b></a></p> <p><a href="https://www.google.com/maps/place/Oxynergy2+Hyperbaric+Oxygen+Longevity+%26+Recovery+Center/@34.065626,-118.373628,16z/data=!4m6!3m5!1s0x80c2b921e8e2a1cd:0xdd0c99cd0a5472e1!8m2!3d34.0656264!4d-118.3736276!16s%2Fg%2F11s97pklgy?hl=en&amp;entry=ttu" target="_blank" rel="noopener"><b>Beverly Hills, CA, 90211</b></a></p> </div>`,
+				cards: [
+					{
+						type: "contacts",
+						title: "Call us at:",
+						textHtml: `<a href="tel:12135920201">+1 213-592-0201</a>`,
+						icon: `<svg xmlns="http://www.w3.org/2000/svg" width="21.863" height="21.863" viewBox="0 0 21.863 21.863"> <path id="Path_2341" data-name="Path 2341" d="M4167.591,2413.348a4.691,4.691,0,0,1-3.557,1.634h-.128a16.511,16.511,0,0,1-16.058-16.058,4.7,4.7,0,0,1,1.642-3.7,4.426,4.426,0,0,1,3.676-1.022,4.112,4.112,0,0,1,.521.131,1.633,1.633,0,0,1,1.1,1.307l.736,4.67a1.661,1.661,0,0,1-.594,1.549c-.092.075-.188.146-.287.212a.59.59,0,0,0-.238.731,10.82,10.82,0,0,0,5.627,5.628.6.6,0,0,0,.737-.243c.051-.076.1-.148.16-.219a1.66,1.66,0,0,1,1.569-.6l4.756.791a1.617,1.617,0,0,1,1.3,1.135c.03.105.058.227.083.365A4.476,4.476,0,0,1,4167.591,2413.348Z" transform="translate(-4147.346 -2393.619)" fill="none" stroke="#f7fffc" stroke-width="1"/> </svg>`
+					},
+					{
+						type: "contacts",
+						icon: `<svg xmlns="http://www.w3.org/2000/svg" width="34.852" height="29.204" viewBox="0 0 34.852 29.204"> <path id="telegram" d="M610.378,337.531q13.632-5.97,18.177-7.873c8.659-3.62,10.456-4.249,11.63-4.27a2.049,2.049,0,0,1,1.208.365,1.345,1.345,0,0,1,.443.849,5.533,5.533,0,0,1,.05,1.234c-.469,4.956-2.5,16.983-3.532,22.535-.433,2.349-1.3,3.136-2.128,3.212-1.812.168-3.186-1.2-4.94-2.358-2.741-1.808-4.29-2.935-6.955-4.7-3.078-2.039-1.082-3.16.672-4.992.458-.478,8.436-7.773,8.587-8.435a.635.635,0,0,0-.146-.554.706.706,0,0,0-.643-.062q-.417.093-13.15,8.738a5.9,5.9,0,0,1-3.381,1.256,22.271,22.271,0,0,1-4.846-1.153c-1.948-.639-3.5-.976-3.366-2.06q.1-.847,2.319-1.732Z" transform="translate(-607.554 -324.888)" fill="none" stroke="#ebf0f0" stroke-width="1"/> </svg>`,
+						title: "Email us at:",
+						textHtml: `<a href="mailto:help@oxynergy2.com">help@oxynergy2.com</a>`
+					}
+				]
+			}
+
 		}
 	}
 }

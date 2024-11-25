@@ -61,3 +61,59 @@
 
 
 }
+.CardContacts {
+  background: rgba(173, 216, 204, 0.31);
+	display: grid;
+  	& * {
+	  margin: 0 !important;
+	  text-align: initial !important;
+	}
+  	grid-template-columns: 1fr 4rem;
+  grid-template-rows: 1fr 1fr;
+  [data-variant="icon"] {
+	grid-row: 1/3;
+	display: flex;
+	object-position: center center;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--fontColor) !important;
+	border-radius: 50%;
+	align-self: center;
+	margin: 0 !important;
+	padding: 1rem !important;
+	max-width: 4rem !important;
+	max-height: 4rem !important;
+	aspect-ratio: 1 / 1;
+  }
+}
+.CardPricing {
+  background: rgba(173, 216, 204, 0.31);
+	display: block;
+  header {
+	margin-bottom: 1rem !important;
+  }
+  	& * {
+	  margin: 0 !important;
+	}
+  	grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  [data-variant="icon"] {
+	grid-row: 1/3;
+	display: flex;
+	object-position: center center;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--fontColor) !important;
+	border-radius: 50%;
+	align-self: center;
+	margin: 0 !important;
+	padding: 1rem !important;
+	max-width: 4rem !important;
+	max-height: 4rem !important;
+	aspect-ratio: 1 / 1;
+  }
+}
+
+.cardcontactsheader {
+
+}

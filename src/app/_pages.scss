@@ -70,3 +70,21 @@
 	}
   }
 }
+.getin {
+  article {
+	margin-bottom: 2rem;
+  }
+}
+.pricing {
+	[data-cards-direction] {
+	  @screen tablet {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	  }
+	  @screen desktop {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	  }
+
+	}
+}

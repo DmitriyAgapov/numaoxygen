@@ -4,11 +4,21 @@ import Image from "next/image";
 import { VideoComponent } from "@/components/Video/Video";
 import { CardProps } from "@/data/data";
 import CardFaq from "@/components/Card/CardFaq";
+import CardContacts from "@/components/Card/CardContacts";
+import CardPricing from "@/components/Card/CardPricing";
 
 const Card = (props: { el: CardProps }) => {
 	if(props.el.type === "faq") {
 		return <CardFaq el={props.el}/>
 	}
+	if(props.el.type === "contacts") {
+		return <CardContacts el={props.el}/>
+	}
+	if(props.el.type === "pricing") {
+		return <CardPricing el={props.el}/>
+	}
+
+
 	return <div className={styles.Card + " " + " card " + props.el.className} data-cardtype={props.el.type}>
 		{props.el.icon ? <div data-variant={"icon"}
 			dangerouslySetInnerHTML={{ __html: props.el.icon }}/> : null}
