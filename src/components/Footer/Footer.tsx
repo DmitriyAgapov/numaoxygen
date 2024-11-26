@@ -6,7 +6,7 @@ import Link from "next/link";
 const TopFooter = () => <div className={styles.TopFooter}>
 
 	<div>
-		<h6 className="num-subscribe__title">Subscribe for NUMA’s updates</h6>
+		<h6 className="num-subscribe__title">Subscribe for UMA’s updates</h6>
 		<p className="num-subscribe__text">Stay on top of the latest blog posts, news and announcements</p>
 	</div>
 

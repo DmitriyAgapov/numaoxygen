@@ -363,10 +363,11 @@ export const mockData = {
 				className: "bg-fontColor",
 				cards: [
 					{
-						className: "*:text-white",
+						className: "*:text-white !grow-2",
 						textHtml: `<div><blockquote>At UMA, we provide Hyperbaric Oxygen Therapy at the highest standards, blending integrity, honesty, and compassion into every aspect of our care. We are privileged to support your health and recovery, <strong>one breath at a time.</strong></blockquote><cite>- Dr. David Cassidy MD, Founder, UMA</cite></div>`
 					},
 					{
+						className: "grow-0",
 						textHtml: `<p>Located in the heart of London's Marylebone, UMA is a leading CQC-registered clinic specializing in Hyperbaric Oxygen Therapy. Our clinic is led by a highly qualified team using advanced hyperbaric chambers, and we take pride in offering expert-led, holistic care for each patient. Your wellbeing is our top priority.</p>`
 					}
 				]
