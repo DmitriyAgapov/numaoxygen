@@ -240,12 +240,12 @@ export const mockData = {
 					link: "hyperbaric-oxygen-therapy"
 				}
 			},
-			block4: {
-				title: "What to Expect?",
-				video: {
-					src: "https://www.youtube.com/watch?v=oqckCVLhGe4"
-				}
-			},
+			// block4: {
+			// 	title: "What to Expect?",
+			// 	video: {
+			// 		src: "https://www.youtube.com/watch?v=oqckCVLhGe4"
+			// 	}
+			// },
 			block5: {
 				title: "What You Receive at UMA",
 				textHtml: `<div class="num-content__text"><p><strong>Medical Expertise</strong>: UMA is led by Dr. David Cassidy, a former NHS Consultant with over 25 years of medical experience, ensuring you receive the highest standard of care.</p> <p><strong>Technical Excellence</strong>: Our skilled engineering team is dedicated to maintaining and optimizing our eight medical-grade Hyperbaric Oxygen Chambers. To provide the best possible treatment, we use specialized BIBS masks, ensuring both patient comfort and maximum therapeutic benefit.</p> <p><strong>Regulated Service</strong>: UMA is fully licensed, accredited, and adheres to the highest professional ethical standards. We are CQC registered and proud members of the Undersea and Hyperbaric Medical Society (UHMS).</p> <p><strong>Outstanding care</strong>:At UMA, we prioritize compassionate and personalized care. Our patient care managers are committed to supporting you throughout your entire treatment journey, ensuring a positive and seamless experience, as reflected in our patient testimonials.</p></div>`
