@@ -713,19 +713,19 @@ export const mockData = {
 			block1: {
 				title: "Get in touch",
 				className: "getin",
-				textHtml: `<div class="location-address"> <p>We are located at:</p> <p><a href="https://www.google.com/maps/place/Oxynergy2+Hyperbaric+Oxygen+Longevity+%26+Recovery+Center/@34.065626,-118.373628,16z/data=!4m6!3m5!1s0x80c2b921e8e2a1cd:0xdd0c99cd0a5472e1!8m2!3d34.0656264!4d-118.3736276!16s%2Fg%2F11s97pklgy?hl=en&amp;entry=ttu" target="_blank" rel="noopener"><b>113 N. San Vicente Blvd. 2nd Floor.</b></a></p> <p><a href="https://www.google.com/maps/place/Oxynergy2+Hyperbaric+Oxygen+Longevity+%26+Recovery+Center/@34.065626,-118.373628,16z/data=!4m6!3m5!1s0x80c2b921e8e2a1cd:0xdd0c99cd0a5472e1!8m2!3d34.0656264!4d-118.3736276!16s%2Fg%2F11s97pklgy?hl=en&amp;entry=ttu" target="_blank" rel="noopener"><b>Beverly Hills, CA, 90211</b></a></p> </div>`,
+				textHtml: `<div class="location-address"> <p>We are located at:</p> <p><a href="https://www.google.com/maps/place/Oxynergy2+Hyperbaric+Oxygen+Longevity+%26+Recovery+Center/@34.065626,-118.373628,16z/data=!4m6!3m5!1s0x80c2b921e8e2a1cd:0xdd0c99cd0a5472e1!8m2!3d34.0656264!4d-118.3736276!16s%2Fg%2F11s97pklgy?hl=en&amp;entry=ttu" target="_blank" rel="noopener"><b>3320 Wadsworth Ave, Los Angeles, CA 90011</b></a></p> <p><a href="https://www.google.com/maps/place/Oxynergy2+Hyperbaric+Oxygen+Longevity+%26+Recovery+Center/@34.065626,-118.373628,16z/data=!4m6!3m5!1s0x80c2b921e8e2a1cd:0xdd0c99cd0a5472e1!8m2!3d34.0656264!4d-118.3736276!16s%2Fg%2F11s97pklgy?hl=en&amp;entry=ttu" target="_blank" rel="noopener"><b>8746 Clifton Way, Beverly Hills, CA 90211</b></a></p></div>`,
 				cards: [
 					{
 						type: "contacts",
 						title: "Call us at:",
-						textHtml: `<a href="tel:12135920201">+1 213-592-0201</a>`,
+						textHtml: `<ul><li><a href="tel:2132126941">(213) 2126941</a></li><li><a href="tel:4243025036">(424) 3025036</a></li></ul>`,
 						icon: `<svg xmlns="http://www.w3.org/2000/svg" width="21.863" height="21.863" viewBox="0 0 21.863 21.863"> <path id="Path_2341" data-name="Path 2341" d="M4167.591,2413.348a4.691,4.691,0,0,1-3.557,1.634h-.128a16.511,16.511,0,0,1-16.058-16.058,4.7,4.7,0,0,1,1.642-3.7,4.426,4.426,0,0,1,3.676-1.022,4.112,4.112,0,0,1,.521.131,1.633,1.633,0,0,1,1.1,1.307l.736,4.67a1.661,1.661,0,0,1-.594,1.549c-.092.075-.188.146-.287.212a.59.59,0,0,0-.238.731,10.82,10.82,0,0,0,5.627,5.628.6.6,0,0,0,.737-.243c.051-.076.1-.148.16-.219a1.66,1.66,0,0,1,1.569-.6l4.756.791a1.617,1.617,0,0,1,1.3,1.135c.03.105.058.227.083.365A4.476,4.476,0,0,1,4167.591,2413.348Z" transform="translate(-4147.346 -2393.619)" fill="none" stroke="#f7fffc" stroke-width="1"/> </svg>`
 					},
 					{
 						type: "contacts",
 						icon: `<svg xmlns="http://www.w3.org/2000/svg" width="34.852" height="29.204" viewBox="0 0 34.852 29.204"> <path id="telegram" d="M610.378,337.531q13.632-5.97,18.177-7.873c8.659-3.62,10.456-4.249,11.63-4.27a2.049,2.049,0,0,1,1.208.365,1.345,1.345,0,0,1,.443.849,5.533,5.533,0,0,1,.05,1.234c-.469,4.956-2.5,16.983-3.532,22.535-.433,2.349-1.3,3.136-2.128,3.212-1.812.168-3.186-1.2-4.94-2.358-2.741-1.808-4.29-2.935-6.955-4.7-3.078-2.039-1.082-3.16.672-4.992.458-.478,8.436-7.773,8.587-8.435a.635.635,0,0,0-.146-.554.706.706,0,0,0-.643-.062q-.417.093-13.15,8.738a5.9,5.9,0,0,1-3.381,1.256,22.271,22.271,0,0,1-4.846-1.153c-1.948-.639-3.5-.976-3.366-2.06q.1-.847,2.319-1.732Z" transform="translate(-607.554 -324.888)" fill="none" stroke="#ebf0f0" stroke-width="1"/> </svg>`,
 						title: "Email us at:",
-						textHtml: `<a href="mailto:help@oxynergy2.com">help@oxynergy2.com</a>`
+						textHtml: `<a href="mailto:info@umaoxygen.com">info@umaoxygen.com</a>`
 					}
 				]
 			}
