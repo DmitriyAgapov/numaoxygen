@@ -72,8 +72,9 @@ const CenterFooter = () => <div className={styles.CenterFooter + " " + "lg:flex 
 		<ul className={"m-0"}>
 			<h6>Address</h6>
 			<p>{mockData.config.address}</p>
+			<p>{mockData.config.secondAddres}</p>
 			<h6>Contact Us</h6>
-			<p>{mockData.config.phone} or <a href={`mailto:${mockData.config.email}`}>{mockData.config.email}</a>  for information & appointments.</p>
+			<p>{mockData.config.phone}, {mockData.config.secondPhone} or <a href={`mailto:${mockData.config.email}`}>{mockData.config.email}</a>  for information & appointments.</p>
 
 		</ul>
 	</div>
